@@ -41,14 +41,12 @@ class Karyawan extends Migration
         // Tambahkan primary key
         $this->forge->addKey('idkaryawan', true);
 
-        // Index untuk kolom FK
-        $this->forge->addKey('idjabatan');
 
         // Tambahkan foreign key
         $this->forge->addForeignKey('idjabatan', 'jabatan', 'id', 'SET NULL', 'CASCADE');
 
-        // Buat tabel (pastikan InnoDB agar FK aktif)
-        $this->forge->createTable('karyawan', true, ['ENGINE' => 'InnoDB']);
+        // Buat tabe (pastikan InnoDB agar FK aktif)
+        $this->forge->createTable('karyawan', true);
     }
 
     public function down()

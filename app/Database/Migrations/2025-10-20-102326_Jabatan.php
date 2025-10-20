@@ -18,14 +18,15 @@ class Jabatan extends Migration
             'namajabatan' => [
                 'type' => 'VARCHAR',
                 'constraint' => 100,
+                'null' => true,
             ]
         ]);
 
         // Tambahkan primary key
         $this->forge->addKey('id', true);
 
-        // Buat tabel (pastikan InnoDB agar FK aktif)
-        $this->forge->createTable('jabatan', true, ['ENGINE' => 'InnoDB']);
+        // Buat tabel
+        $this->forge->createTable('jabatan', true);
     }
 
     public function down()
