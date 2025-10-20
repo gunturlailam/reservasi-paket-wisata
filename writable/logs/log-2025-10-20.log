@@ -67,3 +67,45 @@ Stack trace:
 #11 C:\laragon\www\reservasi-paket-wisata\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
 #12 C:\laragon\www\reservasi-paket-wisata\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
 #13 {main}
+ERROR - 2025-10-20 10:58:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') NULL,
+	CONSTRAINT `pk_paket_wisata` PRIMARY KEY(`id`)
+) ENGINE = InnoDB DEFAUL' at line 5 in C:\laragon\www\reservasi-paket-wisata\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\reservasi-paket-wisata\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\laragon\www\reservasi-paket-wisata\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\laragon\www\reservasi-paket-wisata\app\Database\Migrations\2025-10-20-105438_PaketWisata.php(40): CodeIgniter\Database\Forge->createTable('paket_wisata', true, Array)
+#5 C:\laragon\www\reservasi-paket-wisata\system\Database\MigrationRunner.php(876): App\Database\Migrations\PaketWisata->up()
+#6 C:\laragon\www\reservasi-paket-wisata\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\laragon\www\reservasi-paket-wisata\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\laragon\www\reservasi-paket-wisata\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\laragon\www\reservasi-paket-wisata\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\laragon\www\reservasi-paket-wisata\system\Commands\Database\MigrateRefresh.php(87): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 C:\laragon\www\reservasi-paket-wisata\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 C:\laragon\www\reservasi-paket-wisata\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 C:\laragon\www\reservasi-paket-wisata\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#14 C:\laragon\www\reservasi-paket-wisata\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#15 C:\laragon\www\reservasi-paket-wisata\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#16 {main}
+ERROR - 2025-10-20 11:00:15 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') NULL,
+	CONSTRAINT `pk_paket_wisata` PRIMARY KEY(`id`)
+) ENGINE = InnoDB DEFAUL' at line 5 in C:\laragon\www\reservasi-paket-wisata\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\reservasi-paket-wisata\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\laragon\www\reservasi-paket-wisata\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\laragon\www\reservasi-paket-wisata\app\Database\Migrations\2025-10-20-105438_PaketWisata.php(41): CodeIgniter\Database\Forge->createTable('paket_wisata', true, Array)
+#5 C:\laragon\www\reservasi-paket-wisata\system\Database\MigrationRunner.php(876): App\Database\Migrations\PaketWisata->up()
+#6 C:\laragon\www\reservasi-paket-wisata\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\laragon\www\reservasi-paket-wisata\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\laragon\www\reservasi-paket-wisata\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\laragon\www\reservasi-paket-wisata\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\laragon\www\reservasi-paket-wisata\system\Commands\Database\MigrateRefresh.php(87): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 C:\laragon\www\reservasi-paket-wisata\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 C:\laragon\www\reservasi-paket-wisata\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 C:\laragon\www\reservasi-paket-wisata\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#14 C:\laragon\www\reservasi-paket-wisata\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#15 C:\laragon\www\reservasi-paket-wisata\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#16 {main}
