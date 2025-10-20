@@ -43,11 +43,10 @@ class Pemesanan extends Migration
 
 
         // Tambahkan foreign key
-        // $this->forge->addForeignKey('id_sopir', 'karyawan', 'id', 'SET NULL', 'CASCADE');
-        // $this->forge->addForeignKey('id_kernet', 'karyawan', 'id', 'SET NULL', 'CASCADE');
-        // $this->forge->addForeignKey('id_bus', 'bus', 'id', 'SET NULL', 'CASCADE');
+        $this->forge->addForeignKey('id_penyewa', 'penyewa', 'id', 'SET NULL', 'CASCADE');
+        $this->forge->addForeignKey('id_paketbus', 'paket_bus', 'id', 'SET NULL', 'CASCADE');
 
-        // Buat tabe (pastikan InnoDB agar FK aktif)
+        // Buat tabel
         $this->forge->createTable('pemesanan', true);
     }
 
