@@ -51,3 +51,19 @@ Stack trace:
 #11 C:\laragon\www\reservasi-paket-wisata\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
 #12 C:\laragon\www\reservasi-paket-wisata\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
 #13 {main}
+ERROR - 2025-10-20 10:39:34 --> mysqli_sql_exception: Incorrect table definition; there can be only one auto column and it must be defined as a key in C:\laragon\www\reservasi-paket-wisata\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\reservasi-paket-wisata\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `k...', 0)
+#1 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `k...')
+#2 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `k...')
+#3 C:\laragon\www\reservasi-paket-wisata\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `k...')
+#4 C:\laragon\www\reservasi-paket-wisata\app\Database\Migrations\2025-10-20-103511_Karyawan.php(48): CodeIgniter\Database\Forge->createTable('karyawan', true)
+#5 C:\laragon\www\reservasi-paket-wisata\system\Database\MigrationRunner.php(876): App\Database\Migrations\Karyawan->up()
+#6 C:\laragon\www\reservasi-paket-wisata\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\laragon\www\reservasi-paket-wisata\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\laragon\www\reservasi-paket-wisata\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\laragon\www\reservasi-paket-wisata\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\laragon\www\reservasi-paket-wisata\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 C:\laragon\www\reservasi-paket-wisata\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\laragon\www\reservasi-paket-wisata\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
