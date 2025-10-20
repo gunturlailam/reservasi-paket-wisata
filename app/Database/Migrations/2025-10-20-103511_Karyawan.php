@@ -9,19 +9,13 @@ class Karyawan extends Migration
     public function up()
     {
         $this->forge->addField([
-            'idkaryawan' => [
+            'id' => [
                 'type' => 'INT',
                 'constraint' => 11,
                 'unsigned' => true,
                 'auto_increment' => true,
             ],
-            'idjabatan' => [
-                'type' => 'INT',
-                'constraint' => 11,
-                'unsigned' => true,
-                'null' => true,
-            ],
-            'namakaryawan' => [
+            'nama_karyawan' => [
                 'type' => 'VARCHAR',
                 'constraint' => 100,
                 'null' => true,
@@ -31,19 +25,25 @@ class Karyawan extends Migration
                 'constraint' => 200,
                 'null' => true,
             ],
-            'nohp' => [
+            'no_hp' => [
                 'type' => 'VARCHAR',
                 'constraint' => 20,
+                'null' => true,
+            ],
+            'id_jabatan' => [
+                'type' => 'INT',
+                'constraint' => 11,
+                'unsigned' => true,
                 'null' => true,
             ]
         ]);
 
         // Tambahkan primary key
-        $this->forge->addKey('idkaryawan', true);
+        $this->forge->addKey('id', true);
 
 
         // Tambahkan foreign key
-        $this->forge->addForeignKey('idjabatan', 'jabatan', 'id', 'SET NULL', 'CASCADE');
+        $this->forge->addForeignKey('id_jabatan', 'jabatan', 'id', 'SET NULL', 'CASCADE');
 
         // Buat tabe (pastikan InnoDB agar FK aktif)
         $this->forge->createTable('karyawan', true);

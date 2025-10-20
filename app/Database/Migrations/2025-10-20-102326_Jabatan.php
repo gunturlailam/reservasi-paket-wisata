@@ -15,7 +15,7 @@ class Jabatan extends Migration
                 'unsigned' => true,
                 'auto_increment' => true,
             ],
-            'namajabatan' => [
+            'nama_jabatan' => [
                 'type' => 'VARCHAR',
                 'constraint' => 100,
                 'null' => true,

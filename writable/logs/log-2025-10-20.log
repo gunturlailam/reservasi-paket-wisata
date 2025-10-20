@@ -163,3 +163,79 @@ Stack trace:
 #11 C:\laragon\www\reservasi-paket-wisata\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
 #12 C:\laragon\www\reservasi-paket-wisata\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
 #13 {main}
+ERROR - 2025-10-20 15:48:38 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\reservasi-paket-wisata\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 C:\laragon\www\reservasi-paket-wisata\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', '', 'reservasi_paket...', 3306, '', 0)
+#1 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\laragon\www\reservasi-paket-wisata\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\laragon\www\reservasi-paket-wisata\system\Database\MigrationRunner.php(231): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\laragon\www\reservasi-paket-wisata\system\Commands\Database\MigrateRollback.php(101): CodeIgniter\Database\MigrationRunner->regress(0)
+#8 C:\laragon\www\reservasi-paket-wisata\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 C:\laragon\www\reservasi-paket-wisata\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 C:\laragon\www\reservasi-paket-wisata\system\Commands\Database\MigrateRefresh.php(86): CodeIgniter\CLI\BaseCommand->call('migrate:rollbac...', Array)
+#11 C:\laragon\www\reservasi-paket-wisata\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 C:\laragon\www\reservasi-paket-wisata\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 C:\laragon\www\reservasi-paket-wisata\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#14 C:\laragon\www\reservasi-paket-wisata\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#15 C:\laragon\www\reservasi-paket-wisata\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\reservasi-paket-wisata\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\laragon\www\reservasi-paket-wisata\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\laragon\www\reservasi-paket-wisata\system\Database\MigrationRunner.php(231): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\laragon\www\reservasi-paket-wisata\system\Commands\Database\MigrateRollback.php(101): CodeIgniter\Database\MigrationRunner->regress(0)
+#7 C:\laragon\www\reservasi-paket-wisata\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#8 C:\laragon\www\reservasi-paket-wisata\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#9 C:\laragon\www\reservasi-paket-wisata\system\Commands\Database\MigrateRefresh.php(86): CodeIgniter\CLI\BaseCommand->call('migrate:rollbac...', Array)
+#10 C:\laragon\www\reservasi-paket-wisata\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#11 C:\laragon\www\reservasi-paket-wisata\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#12 C:\laragon\www\reservasi-paket-wisata\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#13 C:\laragon\www\reservasi-paket-wisata\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#14 C:\laragon\www\reservasi-paket-wisata\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#15 {main}
+ERROR - 2025-10-20 15:48:42 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\reservasi-paket-wisata\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 C:\laragon\www\reservasi-paket-wisata\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', '', 'reservasi_paket...', 3306, '', 0)
+#1 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\laragon\www\reservasi-paket-wisata\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\laragon\www\reservasi-paket-wisata\system\Database\MigrationRunner.php(162): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\laragon\www\reservasi-paket-wisata\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\laragon\www\reservasi-paket-wisata\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\laragon\www\reservasi-paket-wisata\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\laragon\www\reservasi-paket-wisata\system\Commands\Database\MigrateRefresh.php(87): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 C:\laragon\www\reservasi-paket-wisata\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 C:\laragon\www\reservasi-paket-wisata\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 C:\laragon\www\reservasi-paket-wisata\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#14 C:\laragon\www\reservasi-paket-wisata\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#15 C:\laragon\www\reservasi-paket-wisata\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\reservasi-paket-wisata\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\laragon\www\reservasi-paket-wisata\system\Database\BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\laragon\www\reservasi-paket-wisata\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\laragon\www\reservasi-paket-wisata\system\Database\MigrationRunner.php(162): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\laragon\www\reservasi-paket-wisata\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\laragon\www\reservasi-paket-wisata\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\laragon\www\reservasi-paket-wisata\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\laragon\www\reservasi-paket-wisata\system\Commands\Database\MigrateRefresh.php(87): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#10 C:\laragon\www\reservasi-paket-wisata\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#11 C:\laragon\www\reservasi-paket-wisata\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#12 C:\laragon\www\reservasi-paket-wisata\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#13 C:\laragon\www\reservasi-paket-wisata\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#14 C:\laragon\www\reservasi-paket-wisata\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#15 {main}
