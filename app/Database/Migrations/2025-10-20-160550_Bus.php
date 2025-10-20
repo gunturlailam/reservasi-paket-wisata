@@ -44,7 +44,7 @@ class Bus extends Migration
 
 
         // Tambahkan foreign key
-        // $this->forge->addForeignKey('id_jenisbus', 'jenisbus', 'id', 'SET NULL', 'CASCADE');
+        $this->forge->addForeignKey('id_jenisbus', 'jenisbus', 'id', 'SET NULL', 'CASCADE');
 
         // Buat tabe (pastikan InnoDB agar FK aktif)
         $this->forge->createTable('bus', true);
