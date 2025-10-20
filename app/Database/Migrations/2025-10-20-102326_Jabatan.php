@@ -24,8 +24,8 @@ class Jabatan extends Migration
         // Tambahkan primary key
         $this->forge->addKey('id', true);
 
-        // Buat tabel
-        $this->forge->createTable('jabatan', true);
+        // Buat tabel (pastikan InnoDB agar FK aktif)
+        $this->forge->createTable('jabatan', true, ['ENGINE' => 'InnoDB']);
     }
 
     public function down()
