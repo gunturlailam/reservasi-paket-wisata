@@ -43,11 +43,11 @@ class PemesananDetail extends Migration
         $this->forge->addForeignKey('id_pemesanan', 'pemesanan', 'id', 'SET NULL', 'CASCADE');
 
         // Buat tabel
-        $this->forge->createTable('pembayaran_detail', true);
+        $this->forge->createTable('pemesanan_detail', true);
     }
 
     public function down()
     {
-        $this->forge->dropTable('pembayaran_detail', true);
+        $this->forge->dropTable('pemesanan_detail', true);
     }
 }

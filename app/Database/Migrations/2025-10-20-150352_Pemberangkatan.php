@@ -53,6 +53,7 @@ class Pemberangkatan extends Migration
         $this->forge->addForeignKey('id_sopir', 'karyawan', 'id', 'SET NULL', 'CASCADE');
         $this->forge->addForeignKey('id_kernet', 'karyawan', 'id', 'SET NULL', 'CASCADE');
         $this->forge->addForeignKey('id_bus', 'bus', 'id', 'SET NULL', 'CASCADE');
+        $this->forge->addForeignKey('id_pemesanan', 'pemesanan', 'id', 'SET NULL', 'CASCADE');
 
         // Buat tabe (pastikan InnoDB agar FK aktif)
         $this->forge->createTable('pemberangkatan', true);
