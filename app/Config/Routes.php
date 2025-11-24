@@ -12,3 +12,9 @@ $routes->get('/jabatan', 'Jabatan::index');
 $routes->post('/jabatan/save', 'Jabatan::save');
 $routes->get('/jabatan/delete/(:num)', 'Jabatan::delete/$1');
 $routes->get('/jabatan/get/(:num)', 'Jabatan::getjabatan/$1');
+
+// KARYAWAN
+$routes->get('/karyawan', 'Karyawan::index');
+$routes->post('/karyawan/save', 'Karyawan::save');
+$routes->get('/karyawan/delete/(:num)', 'Karyawan::delete/$1');
+$routes->get('/karyawan/get/(:num)', 'Karyawan::getkaryawan/$1');

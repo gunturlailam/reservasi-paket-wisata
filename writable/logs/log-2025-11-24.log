@@ -219,3 +219,591 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
  9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
 DEBUG - 2025-11-24 03:58:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 04:04:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 07:28:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 07:29:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 07:29:09 --> ErrorException: Undefined array key "id_jabatan"
+[Method: GET, Route: jabatan]
+in APPPATH\Views\master\jabatan.php on line 30.
+ 1 APPPATH\Views\master\jabatan.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_jabatan"', 'C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php', 30)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('master/jabatan', [], true)
+ 5 APPPATH\Controllers\Jabatan.php(21): view('master/jabatan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 07:29:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 07:29:38 --> ErrorException: Undefined array key "id_jabatan"
+[Method: GET, Route: jabatan]
+in APPPATH\Views\master\jabatan.php on line 30.
+ 1 APPPATH\Views\master\jabatan.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_jabatan"', 'C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php', 30)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('master/jabatan', [], true)
+ 5 APPPATH\Controllers\Jabatan.php(21): view('master/jabatan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 07:29:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 07:29:42 --> ErrorException: Undefined array key "id_jabatan"
+[Method: GET, Route: jabatan]
+in APPPATH\Views\master\jabatan.php on line 30.
+ 1 APPPATH\Views\master\jabatan.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_jabatan"', 'C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php', 30)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('master/jabatan', [], true)
+ 5 APPPATH\Controllers\Jabatan.php(21): view('master/jabatan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 07:29:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 07:29:55 --> ErrorException: Undefined array key "id_jabatan"
+[Method: GET, Route: jabatan]
+in APPPATH\Views\master\jabatan.php on line 30.
+ 1 APPPATH\Views\master\jabatan.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_jabatan"', 'C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php', 30)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('master/jabatan', [], true)
+ 5 APPPATH\Controllers\Jabatan.php(21): view('master/jabatan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 07:30:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 07:30:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 07:30:41 --> ErrorException: Undefined array key "id_jabatan"
+[Method: GET, Route: jabatan]
+in APPPATH\Views\master\jabatan.php on line 30.
+ 1 APPPATH\Views\master\jabatan.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_jabatan"', 'C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php', 30)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('master/jabatan', [], true)
+ 5 APPPATH\Controllers\Jabatan.php(21): view('master/jabatan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 07:30:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 07:30:43 --> ErrorException: Undefined array key "id_jabatan"
+[Method: GET, Route: jabatan]
+in APPPATH\Views\master\jabatan.php on line 30.
+ 1 APPPATH\Views\master\jabatan.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_jabatan"', 'C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php', 30)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('master/jabatan', [], true)
+ 5 APPPATH\Controllers\Jabatan.php(21): view('master/jabatan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 07:31:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 07:31:13 --> ErrorException: Undefined array key "id_jabatan"
+[Method: GET, Route: jabatan]
+in APPPATH\Views\master\jabatan.php on line 30.
+ 1 APPPATH\Views\master\jabatan.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_jabatan"', 'C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php', 30)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('master/jabatan', [], true)
+ 5 APPPATH\Controllers\Jabatan.php(21): view('master/jabatan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 07:31:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 07:32:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 07:35:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 07:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 07:37:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 07:38:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 07:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 07:39:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 07:47:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 07:48:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 07:48:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-24 07:49:01 --> mysqli_sql_exception: Unknown column 'karyawan.id_karyawan' in 'field list' in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `karyawa...', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `karyawa...')
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `karyawa...')
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `karyawa...', Array, false)
+#4 C:\laragon\www\reservasi-wisata\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\reservasi-wisata\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\reservasi-wisata\app\Models\KaryawanModel.php(26): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\reservasi-wisata\app\Controllers\Karyawan.php(23): App\Models\KaryawanModel->getAll()
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+#9 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+#10 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-11-24 07:49:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'karyawan.id_karyawan' in 'field list'
+[Method: GET, Route: karyawan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\KaryawanModel.php(26): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Karyawan.php(23): App\Models\KaryawanModel->getAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-11-24 07:49:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'karyawan.id_karyawan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\KaryawanModel.php(26): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Karyawan.php(23): App\Models\KaryawanModel->getAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-11-24 07:49:01 --> [Caused by] mysqli_sql_exception: Unknown column 'karyawan.id_karyawan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\KaryawanModel.php(26): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Karyawan.php(23): App\Models\KaryawanModel->getAll()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+ERROR - 2025-11-24 07:49:28 --> mysqli_sql_exception: Unknown column 'karyawan.id_karyawan' in 'field list' in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `karyawa...', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `karyawa...')
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `karyawa...')
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `karyawa...', Array, false)
+#4 C:\laragon\www\reservasi-wisata\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\reservasi-wisata\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\reservasi-wisata\app\Models\KaryawanModel.php(26): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\reservasi-wisata\app\Controllers\Karyawan.php(23): App\Models\KaryawanModel->getAll()
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+#9 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+#10 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-11-24 07:49:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'karyawan.id_karyawan' in 'field list'
+[Method: GET, Route: karyawan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\KaryawanModel.php(26): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Karyawan.php(23): App\Models\KaryawanModel->getAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-11-24 07:49:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'karyawan.id_karyawan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\KaryawanModel.php(26): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Karyawan.php(23): App\Models\KaryawanModel->getAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-11-24 07:49:28 --> [Caused by] mysqli_sql_exception: Unknown column 'karyawan.id_karyawan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\KaryawanModel.php(26): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Karyawan.php(23): App\Models\KaryawanModel->getAll()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+ERROR - 2025-11-24 07:49:33 --> mysqli_sql_exception: Unknown column 'karyawan.id_karyawan' in 'field list' in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `karyawa...', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `karyawa...')
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `karyawa...')
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `karyawa...', Array, false)
+#4 C:\laragon\www\reservasi-wisata\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\reservasi-wisata\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\reservasi-wisata\app\Models\KaryawanModel.php(26): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\reservasi-wisata\app\Controllers\Karyawan.php(23): App\Models\KaryawanModel->getAll()
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+#9 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+#10 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-11-24 07:49:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'karyawan.id_karyawan' in 'field list'
+[Method: GET, Route: karyawan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\KaryawanModel.php(26): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Karyawan.php(23): App\Models\KaryawanModel->getAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-11-24 07:49:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'karyawan.id_karyawan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\KaryawanModel.php(26): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Karyawan.php(23): App\Models\KaryawanModel->getAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-11-24 07:49:33 --> [Caused by] mysqli_sql_exception: Unknown column 'karyawan.id_karyawan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\KaryawanModel.php(26): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Karyawan.php(23): App\Models\KaryawanModel->getAll()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 07:49:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 07:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-24 07:49:47 --> mysqli_sql_exception: Unknown column 'karyawan.id_karyawan' in 'field list' in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `karyawa...', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `karyawa...')
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `karyawa...')
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `karyawa...', Array, false)
+#4 C:\laragon\www\reservasi-wisata\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\reservasi-wisata\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\reservasi-wisata\app\Models\KaryawanModel.php(26): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\reservasi-wisata\app\Controllers\Karyawan.php(23): App\Models\KaryawanModel->getAll()
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+#9 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+#10 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-11-24 07:49:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'karyawan.id_karyawan' in 'field list'
+[Method: GET, Route: karyawan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\KaryawanModel.php(26): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Karyawan.php(23): App\Models\KaryawanModel->getAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-11-24 07:49:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'karyawan.id_karyawan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\KaryawanModel.php(26): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Karyawan.php(23): App\Models\KaryawanModel->getAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-11-24 07:49:47 --> [Caused by] mysqli_sql_exception: Unknown column 'karyawan.id_karyawan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `karyawan`.`id_karyawan`, `jabatan`.`nama_jabatan`, `karyawan`.`nama_karyawan`, `karyawan`.`alamat`, `karyawan`.`nohp`, `jabatan`.`id`
+FROM `karyawan`
+LEFT JOIN `jabatan` ON `jabatan`.`id` = `karyawan`.`id_jabatan`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\KaryawanModel.php(26): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Karyawan.php(23): App\Models\KaryawanModel->getAll()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-11-24 07:50:02 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/karyawan.php"
+[Method: GET, Route: karyawan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/karyawan.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/karyawan', [], true)
+ 3 APPPATH\Controllers\Karyawan.php(25): view('/karyawan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 07:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 07:50:26 --> ErrorException: Undefined array key "id_jabatan"
+[Method: GET, Route: karyawan]
+in APPPATH\Views\master\karyawan.php on line 73.
+ 1 APPPATH\Views\master\karyawan.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_jabatan"', 'C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\karyawan.php', 73)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\karyawan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/master/karyawan', [], true)
+ 5 APPPATH\Controllers\Karyawan.php(25): view('/master/karyawan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 07:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 07:51:05 --> ErrorException: Undefined array key "id_jabatan"
+[Method: GET, Route: karyawan]
+in APPPATH\Views\master\karyawan.php on line 73.
+ 1 APPPATH\Views\master\karyawan.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_jabatan"', 'C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\karyawan.php', 73)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\karyawan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/master/karyawan', [], true)
+ 5 APPPATH\Controllers\Karyawan.php(25): view('/master/karyawan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 07:51:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 07:51:34 --> ErrorException: Undefined array key "id_jabatan"
+[Method: GET, Route: karyawan]
+in APPPATH\Views\master\karyawan.php on line 73.
+ 1 APPPATH\Views\master\karyawan.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_jabatan"', 'C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\karyawan.php', 73)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\karyawan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/master/karyawan', [], true)
+ 5 APPPATH\Controllers\Karyawan.php(25): view('/master/karyawan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 07:51:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 07:51:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 07:51:44 --> ErrorException: Undefined array key "id_jabatan"
+[Method: GET, Route: karyawan]
+in APPPATH\Views\master\karyawan.php on line 73.
+ 1 APPPATH\Views\master\karyawan.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_jabatan"', 'C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\karyawan.php', 73)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\karyawan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/master/karyawan', [], true)
+ 5 APPPATH\Controllers\Karyawan.php(25): view('/master/karyawan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 07:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 07:52:32 --> ErrorException: Undefined array key "id_jabatan"
+[Method: GET, Route: karyawan]
+in APPPATH\Views\master\karyawan.php on line 73.
+ 1 APPPATH\Views\master\karyawan.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_jabatan"', 'C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\karyawan.php', 73)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\karyawan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/master/karyawan', [], true)
+ 5 APPPATH\Controllers\Karyawan.php(25): view('/master/karyawan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 07:56:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 07:56:20 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+[Method: GET, Route: karyawan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('index', [], true)
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/master/karyawan', [], true)
+ 4 APPPATH\Controllers\Karyawan.php(25): view('/master/karyawan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 07:57:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 07:57:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 07:58:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 07:59:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 07:59:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:04:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:05:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:05:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:05:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:05:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:05:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:05:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:06:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:08:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:10:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:12:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:12:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:13:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:13:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
