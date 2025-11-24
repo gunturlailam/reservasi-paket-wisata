@@ -4,8 +4,8 @@
 <div class="container-fluid p-4">
     <div class="d-flex flex-wrap align-items-center justify-content-between mb-3 gap-2">
         <div>
-            <h3 class="mb-0">Data Karyawan</h3>
-            <p class="text-muted mb-0">Ngatur karyawan biar makin rapi.</p>
+            <h3 class="mb-0">Data jenis bus</h3>
+            <p class="text-muted mb-0">Buat data berbagai jenis bus.</p>
         </div>
 
         <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalForm" onclick="tambah()">
@@ -26,28 +26,21 @@
                 <table class="table table-bordered table-hover align-middle mb-0">
                     <thead class="table-light">
                         <tr>
-                            <th style="width: 120px;">ID Karyawan</th>
-                            <th>Nama Karyawan</th>
-                            <th>Alamat</th>
-                            <th>No HP</th>
-                            <th>Nama Jabatan</th>
+                            <th style="width: 120px;">ID Jenis Bus</th>
+                            <th>Nama Jenis Bus</th>
                             <th style="width: 180px;">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($karyawan as $row) : ?>
+                        <?php foreach ($jenisbus as $row) : ?>
                             <tr>
                                 <td><?= esc($row['id']) ?></td>
-                                <td><?= esc($row['nama_karyawan']) ?></td>
-                                <td><?= esc($row['alamat']) ?></td>
-                                <td><?= esc($row['nohp']) ?></td>
-                                <td><?= esc($row['nama_jabatan']) ?></td>
+                                <td><?= esc($row['nama_jenisbus']) ?></td>
                                 <td class="text-nowrap">
                                     <button class="btn btn-warning btn-sm me-1" onclick="edit(<?= $row['id'] ?>)">
                                         <i class="mdi mdi-pencil"></i> Edit
                                     </button>
-                                    <a href="<?= site_url('/karyawan/delete/' . $row['id']) ?>"
-                                        class="btn btn-danger btn-sm"
+                                    <a href="<?= site_url('/jenisbus/delete/' . $row['id']) ?>" class="btn btn-danger btn-sm"
                                         onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
                                         <i class="mdi mdi-delete"></i> Hapus
                                     </a>
@@ -55,10 +48,9 @@
                             </tr>
                         <?php endforeach; ?>
 
-                        <?php if (empty($karyawan)) : ?>
+                        <?php if (empty($jenisbus)) : ?>
                             <tr>
-                                <td colspan="6" class="text-center text-muted">Belum ada data karyawan, yuk tambah dulu.
-                                </td>
+                                <td colspan="3" class="text-center text-muted">Belum ada data jenisbus, yuk tambah dulu.</td>
                             </tr>
                         <?php endif; ?>
                     </tbody>
@@ -71,9 +63,9 @@
 <!-- Modal Form -->
 <div class="modal fade" id="modalForm" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
-        <form action="<?= site_url('/karyawan/save') ?>" method="post" class="modal-content">
+        <form action="<?= site_url('/jenisbus/save') ?>" method="post" class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="modalTitle">Tambah Karyawan</h5>
+                <h5 class="modal-title" id="modalTitle">Tambah jenisbus</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -83,25 +75,8 @@
                 <input type="hidden" name="id" id="id">
 
                 <div class="mb-3">
-                    <label for="nama_karyawan" class="form-label">Nama Karyawan</label>
-                    <input type="text" name="nama_karyawan" id="nama_karyawan" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="alamat" class="form-label">Alamat</label>
-                    <input type="text" name="alamat" id="alamat" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="nohp" class="form-label">No HP</label>
-                    <input type="text" name="nohp" id="nohp" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="id_jabatan" class="form-label">Nama Jabatan</label>
-                    <select name="id_jabatan" id="id_jabatan" class="form-control" required>
-                        <option value="">Pilih Jabatan</option>
-                        <?php foreach ($jabatan as $j) : ?>
-                            <option value="<?= esc($j['id']) ?>"><?= esc($j['nama_jabatan']) ?></option>
-                        <?php endforeach; ?>
-                    </select>
+                    <label for="nama_jenisbus" class="form-label">Nama jenisbus</label>
+                    <input type="text" name="nama_jenisbus" id="nama_jenisbus" class="form-control" required>
                 </div>
             </div>
 
@@ -115,24 +90,18 @@
 
 <script>
     function tambah() {
-        document.getElementById('modalTitle').innerText = 'Tambah Karyawan';
+        document.getElementById('modalTitle').innerText = 'Tambah jenisbus';
         document.getElementById('id').value = '';
-        document.getElementById('nama_karyawan').value = '';
-        document.getElementById('alamat').value = '';
-        document.getElementById('nohp').value = '';
-        document.getElementById('id_jabatan').value = '';
+        document.getElementById('nama_jenisbus').value = '';
     }
 
     function edit(id) {
-        fetch('<?= site_url('/karyawan/get/') ?>' + id)
+        fetch('<?= site_url('/jenisbus/get/') ?>' + id)
             .then((response) => response.json())
             .then((data) => {
-                document.getElementById('modalTitle').innerText = 'Edit Karyawan';
+                document.getElementById('modalTitle').innerText = 'Edit jenisbus';
                 document.getElementById('id').value = data.id;
-                document.getElementById('nama_karyawan').value = data.nama_karyawan;
-                document.getElementById('alamat').value = data.alamat;
-                document.getElementById('nohp').value = data.nohp;
-                document.getElementById('id_jabatan').value = data.id_jabatan;
+                document.getElementById('nama_jenisbus').value = data.nama_jenisbus;
 
                 const modal = new bootstrap.Modal(document.getElementById('modalForm'));
                 modal.show();

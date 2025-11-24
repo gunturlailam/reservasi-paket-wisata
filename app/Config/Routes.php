@@ -18,3 +18,9 @@ $routes->get('/karyawan', 'Karyawan::index');
 $routes->post('/karyawan/save', 'Karyawan::save');
 $routes->get('/karyawan/delete/(:num)', 'Karyawan::delete/$1');
 $routes->get('/karyawan/get/(:num)', 'Karyawan::getkaryawan/$1');
+
+// JENIS BUS
+$routes->get('/jenisbus', 'Jenisbus::index');
+$routes->post('/jenisbus/save', 'Jenisbus::save');
+$routes->get('/jenisbus/delete/(:num)', 'Jenisbus::delete/$1');
+$routes->get('/jenisbus/get/(:num)', 'Jenisbus::getkaryawan/$1');

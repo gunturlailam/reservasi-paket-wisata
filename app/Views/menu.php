@@ -16,7 +16,7 @@
         <ul class="list-unstyled">
             <li><a href="<?= site_url('/jabatan') ?>">Jabatan</a></li>
             <li><a href="<?= site_url('/karyawan') ?>">Karyawan</a></li>
-            <li><a href="charts-chartjs.html">Ruangan</a></li>
+            <li><a href="<?= site_url('/jenisbus') ?>">Jenis Bus</a></li>
         </ul>
     </li>
 </ul>
