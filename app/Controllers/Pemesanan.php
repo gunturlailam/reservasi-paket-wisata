@@ -28,7 +28,7 @@ class Pemesanan extends BaseController
             'paketbus' => $this->paketbusModel->getAll(),
         ];
 
-        return view('master/pemesanan', $data);
+        return view('transaksi/pemesanan', $data);
     }
 
     public function save()

@@ -32,7 +32,7 @@ class Pemberangkatan extends BaseController
             'karyawan' => $this->karyawanModel->findAll(),
         ];
 
-        return view('master/pemberangkatan', $data);
+        return view('transaksi/pemberangkatan', $data);
     }
 
     public function save()

@@ -24,7 +24,7 @@ class PemesananDetail extends BaseController
             'pemesanan' => $this->pemesananModel->getAll(),
         ];
 
-        return view('master/pemesanan_detail', $data);
+        return view('transaksi/pemesanan_detail', $data);
     }
 
     public function save()

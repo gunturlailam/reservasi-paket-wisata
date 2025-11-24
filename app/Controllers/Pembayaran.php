@@ -24,7 +24,7 @@ class Pembayaran extends BaseController
             'pemesanan' => $this->pemesananModel->getAll(),
         ];
 
-        return view('master/pembayaran', $data);
+        return view('transaksi/pembayaran', $data);
     }
 
     public function save()
