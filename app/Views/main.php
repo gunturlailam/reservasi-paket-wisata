@@ -50,7 +50,9 @@
             <div class="sidebar-inner slimscrollleft">
 
                 <div id="sidebar-menu">
+                    <?= $this->renderSection('menu') ?>
                     <?= $this->include('menu') ?>
+
                 </div>
                 <div class="clearfix"></div>
             </div> <!-- end sidebarinner -->
@@ -98,41 +100,41 @@
     <!-- App js -->
     <script src=<?= base_url('assets/js/app.js') ?>></script>
     <script>
-    /* BEGIN SVG WEATHER ICON */
-    if (typeof Skycons !== 'undefined') {
-        var icons = new Skycons({
-                "color": "#fff"
-            }, {
-                "resizeClear": true
-            }),
-            list = [
-                "clear-day", "clear-night", "partly-cloudy-day",
-                "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
-                "fog"
-            ],
-            i;
+        /* BEGIN SVG WEATHER ICON */
+        if (typeof Skycons !== 'undefined') {
+            var icons = new Skycons({
+                    "color": "#fff"
+                }, {
+                    "resizeClear": true
+                }),
+                list = [
+                    "clear-day", "clear-night", "partly-cloudy-day",
+                    "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+                    "fog"
+                ],
+                i;
 
-        for (i = list.length; i--;)
-            icons.set(list[i], list[i]);
-        icons.play();
-    };
+            for (i = list.length; i--;)
+                icons.set(list[i], list[i]);
+            icons.play();
+        };
 
-    // scroll
+        // scroll
 
-    $(document).ready(function() {
+        $(document).ready(function() {
 
-        $("#boxscroll").niceScroll({
-            cursorborder: "",
-            cursorcolor: "#cecece",
-            boxzoom: true
+            $("#boxscroll").niceScroll({
+                cursorborder: "",
+                cursorcolor: "#cecece",
+                boxzoom: true
+            });
+            $("#boxscroll2").niceScroll({
+                cursorborder: "",
+                cursorcolor: "#cecece",
+                boxzoom: true
+            });
+
         });
-        $("#boxscroll2").niceScroll({
-            cursorborder: "",
-            cursorcolor: "#cecece",
-            boxzoom: true
-        });
-
-    });
     </script>
 
 </body>
