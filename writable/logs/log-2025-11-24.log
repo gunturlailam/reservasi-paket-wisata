@@ -1,0 +1,221 @@
+CRITICAL - 2025-11-24 03:38:54 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/jabatan.php"
+[Method: GET, Route: jabatan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/jabatan.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/jabatan', [], true)
+ 3 APPPATH\Controllers\Jabatan.php(21): view('/jabatan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-11-24 03:40:09 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/jabatan.php"
+[Method: GET, Route: jabatan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/jabatan.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/jabatan', [], true)
+ 3 APPPATH\Controllers\Jabatan.php(21): view('/jabatan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-11-24 03:40:16 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/jabatan.php"
+[Method: GET, Route: jabatan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/jabatan.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/jabatan', [], true)
+ 3 APPPATH\Controllers\Jabatan.php(21): view('/jabatan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-11-24 03:40:43 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/jabatan.php"
+[Method: GET, Route: jabatan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/jabatan.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/jabatan', [], true)
+ 3 APPPATH\Controllers\Jabatan.php(21): view('/jabatan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-11-24 03:41:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/jabatan.php"
+[Method: GET, Route: jabatan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/jabatan.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/jabatan', [], true)
+ 3 APPPATH\Controllers\Jabatan.php(21): view('/jabatan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 03:41:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 03:41:49 --> ErrorException: Undefined variable $pemeriksaan
+[Method: GET, Route: jabatan]
+in APPPATH\Views\master\jabatan.php on line 39.
+ 1 APPPATH\Views\master\jabatan.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pemeriksaan', 'C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php', 39)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/master/jabatan', [], true)
+ 5 APPPATH\Controllers\Jabatan.php(21): view('/master/jabatan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 03:42:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 03:42:17 --> ErrorException: Undefined variable $pemeriksaan
+[Method: GET, Route: jabatan]
+in APPPATH\Views\master\jabatan.php on line 39.
+ 1 APPPATH\Views\master\jabatan.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pemeriksaan', 'C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php', 39)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/master/jabatan', [], true)
+ 5 APPPATH\Controllers\Jabatan.php(21): view('/master/jabatan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 03:42:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 03:42:24 --> ErrorException: Undefined variable $pemeriksaan
+[Method: GET, Route: jabatan]
+in APPPATH\Views\master\jabatan.php on line 39.
+ 1 APPPATH\Views\master\jabatan.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pemeriksaan', 'C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php', 39)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/master/jabatan', [], true)
+ 5 APPPATH\Controllers\Jabatan.php(21): view('/master/jabatan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 03:42:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 03:42:30 --> ErrorException: Undefined variable $pasien
+[Method: GET, Route: jabatan]
+in APPPATH\Views\master\jabatan.php on line 72.
+ 1 APPPATH\Views\master\jabatan.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pasien', 'C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php', 72)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/master/jabatan', [], true)
+ 5 APPPATH\Controllers\Jabatan.php(21): view('/master/jabatan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 03:44:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 03:44:59 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+[Method: GET, Route: jabatan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('index', [], true)
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/master/jabatan', [], true)
+ 4 APPPATH\Controllers\Jabatan.php(21): view('/master/jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 03:45:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 03:45:40 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+[Method: GET, Route: jabatan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('index', [], true)
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/master/jabatan', [], true)
+ 4 APPPATH\Controllers\Jabatan.php(21): view('/master/jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 03:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 03:46:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 03:47:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 03:47:47 --> ErrorException: Undefined array key "id_jabatan"
+[Method: GET, Route: jabatan]
+in APPPATH\Views\master\jabatan.php on line 38.
+ 1 APPPATH\Views\master\jabatan.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_jabatan"', 'C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('master/jabatan', [], true)
+ 5 APPPATH\Controllers\Jabatan.php(21): view('master/jabatan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 03:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 03:48:06 --> ErrorException: Undefined array key "id_jabatan"
+[Method: GET, Route: jabatan]
+in APPPATH\Views\master\jabatan.php on line 41.
+ 1 APPPATH\Views\master\jabatan.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_jabatan"', 'C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php', 41)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\jabatan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('master/jabatan', [], true)
+ 5 APPPATH\Controllers\Jabatan.php(21): view('master/jabatan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 03:48:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 03:48:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 03:49:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 03:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 03:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 03:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 03:54:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 03:54:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 03:55:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 03:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 03:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 03:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 03:57:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 03:57:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 03:58:02 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/jabatan.php"
+[Method: GET, Route: jabatan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/jabatan.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/jabatan', [], true)
+ 3 APPPATH\Controllers\Jabatan.php(21): view('/jabatan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 03:58:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

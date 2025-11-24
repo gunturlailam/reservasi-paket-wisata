@@ -14,7 +14,7 @@
         </a>
 
         <ul class="list-unstyled">
-            <li><a href="<?= site_url('dokter/index') ?>">Dokter</a></li>
+            <li><a href="<?= site_url('/jabatan') ?>">Jabatan</a></li>
             <li><a href="charts-chartist.html">Pasien</a></li>
             <li><a href="charts-chartjs.html">Ruangan</a></li>
         </ul>
