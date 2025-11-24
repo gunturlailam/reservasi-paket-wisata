@@ -882,3 +882,48 @@ FROM `jenisbus`', [], false)
 DEBUG - 2025-11-24 08:20:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-24 08:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-24 08:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:35:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 08:35:08 --> ErrorException: Undefined variable $jenisbus
+[Method: GET, Route: bus]
+in APPPATH\Views\master\bus.php on line 101.
+ 1 APPPATH\Views\master\bus.php(101): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jenisbus', 'C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\bus.php', 101)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\bus.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/master/bus', [], true)
+ 5 APPPATH\Controllers\Bus.php(25): view('/master/bus', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Bus->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bus))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 08:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 08:35:45 --> ErrorException: Undefined variable $jenisbus
+[Method: GET, Route: bus]
+in APPPATH\Views\master\bus.php on line 101.
+ 1 APPPATH\Views\master\bus.php(101): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jenisbus', 'C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\bus.php', 101)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\master\\bus.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/master/bus', [], true)
+ 5 APPPATH\Controllers\Bus.php(25): view('/master/bus', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Bus->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bus))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-24 08:37:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:38:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:38:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:39:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:39:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:42:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:45:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:45:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:45:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:46:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

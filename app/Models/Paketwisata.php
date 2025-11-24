@@ -4,27 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class BusModel extends Model
+class Paketwisata extends Model
 {
-    protected $table            = 'bus';
+    protected $table            = 'paketwisatas';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [
-        'nomor_polisi',
-        'merek',
-        'kapasitas',
-        'id_jenisbus'
-    ];
-
-    public function getAll()
-    {
-        return $this->select('bus.id,jenis_bus.nama_jenisbus, bus.nomor_polisi, bus.merek,bus.kapasitas, bus.id_jenisbus')
-            ->join('jenis_bus', 'jenis_bus.id = bus.id_jenisbus', 'left')
-            ->findAll();
-    }
+    protected $allowedFields    = [];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
