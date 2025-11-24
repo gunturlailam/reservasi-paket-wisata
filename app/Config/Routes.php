@@ -13,6 +13,42 @@ $routes->post('/jabatan/save', 'Jabatan::save');
 $routes->get('/jabatan/delete/(:num)', 'Jabatan::delete/$1');
 $routes->get('/jabatan/get/(:num)', 'Jabatan::getjabatan/$1');
 
+// PAKET BUS
+$routes->get('/paketbus', 'Paketbus::index');
+$routes->post('/paketbus/save', 'Paketbus::save');
+$routes->get('/paketbus/delete/(:num)', 'Paketbus::delete/$1');
+$routes->get('/paketbus/get/(:num)', 'Paketbus::getpaketbus/$1');
+
+// PENYEWA
+$routes->get('/penyewa', 'Penyewa::index');
+$routes->post('/penyewa/save', 'Penyewa::save');
+$routes->get('/penyewa/delete/(:num)', 'Penyewa::delete/$1');
+$routes->get('/penyewa/get/(:num)', 'Penyewa::getpenyewa/$1');
+
+// PEMBERANGKATAN
+$routes->get('/pemberangkatan', 'Pemberangkatan::index');
+$routes->post('/pemberangkatan/save', 'Pemberangkatan::save');
+$routes->get('/pemberangkatan/delete/(:num)', 'Pemberangkatan::delete/$1');
+$routes->get('/pemberangkatan/get/(:num)', 'Pemberangkatan::getpemberangkatan/$1');
+
+// PEMESANAN
+$routes->get('/pemesanan', 'Pemesanan::index');
+$routes->post('/pemesanan/save', 'Pemesanan::save');
+$routes->get('/pemesanan/delete/(:num)', 'Pemesanan::delete/$1');
+$routes->get('/pemesanan/get/(:num)', 'Pemesanan::getpemesanan/$1');
+
+// PEMBAYARAN
+$routes->get('/pembayaran', 'Pembayaran::index');
+$routes->post('/pembayaran/save', 'Pembayaran::save');
+$routes->get('/pembayaran/delete/(:num)', 'Pembayaran::delete/$1');
+$routes->get('/pembayaran/get/(:num)', 'Pembayaran::getpembayaran/$1');
+
+// PEMESANAN DETAIL
+$routes->get('/pemesanan-detail', 'PemesananDetail::index');
+$routes->post('/pemesanan-detail/save', 'PemesananDetail::save');
+$routes->get('/pemesanan-detail/delete/(:num)', 'PemesananDetail::delete/$1');
+$routes->get('/pemesanan-detail/get/(:num)', 'PemesananDetail::getpemesananDetail/$1');
+
 // KARYAWAN
 $routes->get('/karyawan', 'Karyawan::index');
 $routes->post('/karyawan/save', 'Karyawan::save');
