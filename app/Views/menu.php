@@ -18,6 +18,7 @@
             <li><a href="<?= site_url('/karyawan') ?>">Karyawan</a></li>
             <li><a href="<?= site_url('/jenisbus') ?>">Jenis Bus</a></li>
             <li><a href="<?= site_url('/bus') ?>">Bus</a></li>
+            <li><a href="<?= site_url('/paketwisata') ?>">Paket Wisata</a></li>
         </ul>
     </li>
 </ul>

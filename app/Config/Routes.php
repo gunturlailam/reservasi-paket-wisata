@@ -30,3 +30,9 @@ $routes->get('/bus', 'Bus::index');
 $routes->post('/bus/save', 'Bus::save');
 $routes->get('/bus/delete/(:num)', 'Bus::delete/$1');
 $routes->get('/bus/get/(:num)', 'Bus::getbus/$1');
+
+// PAKET WISATA
+$routes->get('/paketwisata', 'Paketwisata::index');
+$routes->post('/paketwisata/save', 'Paketwisata::save');
+$routes->get('/paketwisata/delete/(:num)', 'Paketwisata::delete/$1');
+$routes->get('/paketwisata/get/(:num)', 'Paketwisata::getbus/$1');
