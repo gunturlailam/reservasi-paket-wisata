@@ -86,4 +86,14 @@ class Pemesanan extends BaseController
         $data = $this->pemesananModel->find($id);
         return $this->response->setJSON($data);
     }
+
+    public function laporan()
+    {
+        $data = [
+            'pemesanan' => $this->pemesananModel->getAll(),
+            'title' => 'Laporan Data Pemesanan'
+        ];
+
+        return view('laporan/laporan_pemesanan', $data);
+    }
 }

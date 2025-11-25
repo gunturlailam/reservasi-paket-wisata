@@ -36,6 +36,7 @@ $routes->get('/pemesanan', 'Pemesanan::index');
 $routes->post('/pemesanan/save', 'Pemesanan::save');
 $routes->get('/pemesanan/delete/(:num)', 'Pemesanan::delete/$1');
 $routes->get('/pemesanan/get/(:num)', 'Pemesanan::getpemesanan/$1');
+$routes->get('/pemesanan/laporan', 'Pemesanan::laporan');
 
 // PEMBAYARAN
 $routes->get('/pembayaran', 'Pembayaran::index');

@@ -8,18 +8,23 @@
             <p class="text-muted mb-0">Catatan pesanan paket wisata + bus.</p>
         </div>
 
-        <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalForm" onclick="tambah()">
-            <i class="mdi mdi-plus"></i> Tambah Data
-        </button>
+        <div class="d-flex gap-3">
+            <a href="<?= site_url('/pemesanan/laporan') ?>" class="btn btn-info" target="_blank">
+                <i class="mdi mdi-file-document"></i> Laporan
+            </a>
+            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalForm" onclick="tambah()">
+                <i class="mdi mdi-plus"></i> Tambah Data
+            </button>
+        </div>
     </div>
 
     <?php if (session()->getFlashdata('success')) : ?>
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <?= session()->getFlashdata('success') ?>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <?= session()->getFlashdata('success') ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
     <?php endif; ?>
 
     <div class="card">
@@ -38,29 +43,29 @@
                     </thead>
                     <tbody>
                         <?php foreach ($pemesanan as $row) : ?>
-                        <tr>
-                            <td><?= esc($row['id']) ?></td>
-                            <td><?= esc($row['tanggal_pesan']) ?></td>
-                            <td><?= esc($row['nama_penyewa'] ?? '-') ?></td>
-                            <td><?= esc($row['nama_paket'] ?? '-') ?></td>
-                            <td><?= number_format((float) $row['total_bayar'], 0, ',', '.') ?></td>
-                            <td class="text-nowrap">
-                                <button class="btn btn-warning btn-sm me-1" onclick="edit(<?= $row['id'] ?>)">
-                                    <i class="mdi mdi-pencil"></i> Edit
-                                </button>
-                                <a href="<?= site_url('/pemesanan/delete/' . $row['id']) ?>"
-                                    class="btn btn-danger btn-sm"
-                                    onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
-                                    <i class="mdi mdi-delete"></i> Hapus
-                                </a>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td><?= esc($row['id']) ?></td>
+                                <td><?= esc($row['tanggal_pesan']) ?></td>
+                                <td><?= esc($row['nama_penyewa'] ?? '-') ?></td>
+                                <td><?= esc($row['nama_paket'] ?? '-') ?></td>
+                                <td><?= number_format((float) $row['total_bayar'], 0, ',', '.') ?></td>
+                                <td class="text-nowrap">
+                                    <button class="btn btn-warning btn-sm me-1" onclick="edit(<?= $row['id'] ?>)">
+                                        <i class="mdi mdi-pencil"></i> Edit
+                                    </button>
+                                    <a href="<?= site_url('/pemesanan/delete/' . $row['id']) ?>"
+                                        class="btn btn-danger btn-sm"
+                                        onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
+                                        <i class="mdi mdi-delete"></i> Hapus
+                                    </a>
+                                </td>
+                            </tr>
                         <?php endforeach; ?>
 
                         <?php if (empty($pemesanan)) : ?>
-                        <tr>
-                            <td colspan="6" class="text-center text-muted">Belum ada data pemesanan.</td>
-                        </tr>
+                            <tr>
+                                <td colspan="6" class="text-center text-muted">Belum ada data pemesanan.</td>
+                            </tr>
                         <?php endif; ?>
                     </tbody>
                 </table>
@@ -93,7 +98,7 @@
                     <select name="id_penyewa" id="id_penyewa" class="form-control" required>
                         <option value="">Pilih Penyewa</option>
                         <?php foreach ($penyewa as $item) : ?>
-                        <option value="<?= esc($item['id']) ?>"><?= esc($item['nama_penyewa']) ?></option>
+                            <option value="<?= esc($item['id']) ?>"><?= esc($item['nama_penyewa']) ?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>
@@ -104,10 +109,10 @@
                         onchange="syncTotalBayar()">
                         <option value="">Pilih Paket Bus</option>
                         <?php foreach ($paketbus as $paket) : ?>
-                        <option value="<?= esc($paket['id']) ?>" data-harga="<?= esc($paket['harga'] ?? 0) ?>">
-                            #<?= esc($paket['id']) ?> - <?= esc($paket['nama_paket'] ?? 'Paket') ?> (Rp
-                            <?= number_format((float) ($paket['harga'] ?? 0), 0, ',', '.') ?>)
-                        </option>
+                            <option value="<?= esc($paket['id']) ?>" data-harga="<?= esc($paket['harga'] ?? 0) ?>">
+                                #<?= esc($paket['id']) ?> - <?= esc($paket['nama_paket'] ?? 'Paket') ?> (Rp
+                                <?= number_format((float) ($paket['harga'] ?? 0), 0, ',', '.') ?>)
+                            </option>
                         <?php endforeach; ?>
                     </select>
                 </div>
@@ -127,38 +132,38 @@
 </div>
 
 <script>
-function tambah() {
-    document.getElementById('modalTitle').innerText = 'Tambah Pemesanan';
-    document.getElementById('id').value = '';
-    document.getElementById('tanggal_pesan').value = '';
-    document.getElementById('id_penyewa').value = '';
-    document.getElementById('id_paketbus').value = '';
-    document.getElementById('total_bayar').value = '';
-    syncTotalBayar();
-}
+    function tambah() {
+        document.getElementById('modalTitle').innerText = 'Tambah Pemesanan';
+        document.getElementById('id').value = '';
+        document.getElementById('tanggal_pesan').value = '';
+        document.getElementById('id_penyewa').value = '';
+        document.getElementById('id_paketbus').value = '';
+        document.getElementById('total_bayar').value = '';
+        syncTotalBayar();
+    }
 
-function edit(id) {
-    fetch('<?= site_url('/pemesanan/get/') ?>' + id)
-        .then((response) => response.json())
-        .then((data) => {
-            document.getElementById('modalTitle').innerText = 'Edit Pemesanan';
-            document.getElementById('id').value = data.id;
-            document.getElementById('tanggal_pesan').value = data.tanggal_pesan;
-            document.getElementById('id_penyewa').value = data.id_penyewa;
-            document.getElementById('id_paketbus').value = data.id_paketbus;
-            document.getElementById('total_bayar').value = data.total_bayar;
-            syncTotalBayar();
+    function edit(id) {
+        fetch('<?= site_url('/pemesanan/get/') ?>' + id)
+            .then((response) => response.json())
+            .then((data) => {
+                document.getElementById('modalTitle').innerText = 'Edit Pemesanan';
+                document.getElementById('id').value = data.id;
+                document.getElementById('tanggal_pesan').value = data.tanggal_pesan;
+                document.getElementById('id_penyewa').value = data.id_penyewa;
+                document.getElementById('id_paketbus').value = data.id_paketbus;
+                document.getElementById('total_bayar').value = data.total_bayar;
+                syncTotalBayar();
 
-            const modal = new bootstrap.Modal(document.getElementById('modalForm'));
-            modal.show();
-        });
-}
+                const modal = new bootstrap.Modal(document.getElementById('modalForm'));
+                modal.show();
+            });
+    }
 
-function syncTotalBayar() {
-    const select = document.getElementById('id_paketbus');
-    const harga = select.options[select.selectedIndex]?.dataset.harga || 0;
-    document.getElementById('total_bayar').value = harga;
-}
+    function syncTotalBayar() {
+        const select = document.getElementById('id_paketbus');
+        const harga = select.options[select.selectedIndex]?.dataset.harga || 0;
+        document.getElementById('total_bayar').value = harga;
+    }
 </script>
 
 <?= $this->endSection(); ?>
