@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\PemesananModel;
+use App\Models\PaketwisataModel;
 use App\Models\PenyewaModel;
 use App\Models\PaketbusModel;
 
@@ -11,12 +12,14 @@ class Pemesanan extends BaseController
 {
     protected $pemesananModel;
     protected $penyewaModel;
+    protected $paketwisataModel;
     protected $paketbusModel;
 
     public function __construct()
     {
         $this->pemesananModel = new PemesananModel();
         $this->penyewaModel = new PenyewaModel();
+        $this->paketwisataModel = new PaketwisataModel();
         $this->paketbusModel = new PaketbusModel();
     }
 
@@ -35,11 +38,13 @@ class Pemesanan extends BaseController
     {
         $id = $this->request->getPost('id');
 
+        $totalBayar = $this->calculateHargaPaket($this->request->getPost('id_paketbus'));
+
         $data = [
             'tanggal_pesan' => $this->request->getPost('tanggal_pesan'),
             'id_penyewa' => $this->request->getPost('id_penyewa'),
             'id_paketbus' => $this->request->getPost('id_paketbus'),
-            'total_bayar' => $this->request->getPost('total_bayar'),
+            'total_bayar' => $totalBayar,
         ];
 
         if ($id) {
@@ -51,6 +56,22 @@ class Pemesanan extends BaseController
         }
 
         return redirect()->to('/pemesanan');
+    }
+
+    private function calculateHargaPaket($idPaketBus): int
+    {
+        if (! $idPaketBus) {
+            return 0;
+        }
+
+        $paketBus = $this->paketbusModel->find($idPaketBus);
+        if (! $paketBus || empty($paketBus['id_paketwisata'])) {
+            return 0;
+        }
+
+        $paketWisata = $this->paketwisataModel->find($paketBus['id_paketwisata']);
+
+        return (int) ($paketWisata['harga'] ?? 0);
     }
 
     public function delete($id)

@@ -1,0 +1,188 @@
+ERROR - 2025-11-25 11:21:50 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', '', 'reservasi', 3306, '', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pemesan...', Array, false)
+#4 C:\laragon\www\reservasi-wisata\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\reservasi-wisata\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\reservasi-wisata\app\Models\PemesananDetailModel.php(27): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\reservasi-wisata\app\Controllers\PemesananDetail.php(23): App\Models\PemesananDetailModel->getAll()
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\PemesananDetail->index()
+#9 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PemesananDetail))
+#10 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pemesan...', Array, false)
+#3 C:\laragon\www\reservasi-wisata\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\reservasi-wisata\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\reservasi-wisata\app\Models\PemesananDetailModel.php(27): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\reservasi-wisata\app\Controllers\PemesananDetail.php(23): App\Models\PemesananDetailModel->getAll()
+#7 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\PemesananDetail->index()
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PemesananDetail))
+#9 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2025-11-25 11:21:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: pemesanan-detail]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pemesanan_detail`.*, `pemesanan`.`tanggal_pesan`, `penyewa`.`nama_penyewa`
+FROM `pemesanan_detail`
+LEFT JOIN `pemesanan` ON `pemesanan`.`id` = `pemesanan_detail`.`id_pemesanan`
+LEFT JOIN `penyewa` ON `penyewa`.`id` = `pemesanan`.`id_penyewa`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\PemesananDetailModel.php(27): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\PemesananDetail.php(23): App\Models\PemesananDetailModel->getAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PemesananDetail->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PemesananDetail))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+ERROR - 2025-11-25 11:22:36 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', '', 'reservasi', 3306, '', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pemesan...', Array, false)
+#4 C:\laragon\www\reservasi-wisata\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\reservasi-wisata\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\reservasi-wisata\app\Models\PemesananDetailModel.php(27): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\reservasi-wisata\app\Controllers\PemesananDetail.php(23): App\Models\PemesananDetailModel->getAll()
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\PemesananDetail->index()
+#9 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PemesananDetail))
+#10 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pemesan...', Array, false)
+#3 C:\laragon\www\reservasi-wisata\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\reservasi-wisata\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\reservasi-wisata\app\Models\PemesananDetailModel.php(27): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\reservasi-wisata\app\Controllers\PemesananDetail.php(23): App\Models\PemesananDetailModel->getAll()
+#7 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\PemesananDetail->index()
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PemesananDetail))
+#9 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2025-11-25 11:22:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: pemesanan-detail]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pemesanan_detail`.*, `pemesanan`.`tanggal_pesan`, `penyewa`.`nama_penyewa`
+FROM `pemesanan_detail`
+LEFT JOIN `pemesanan` ON `pemesanan`.`id` = `pemesanan_detail`.`id_pemesanan`
+LEFT JOIN `penyewa` ON `penyewa`.`id` = `pemesanan`.`id_penyewa`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\PemesananDetailModel.php(27): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\PemesananDetail.php(23): App\Models\PemesananDetailModel->getAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PemesananDetail->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PemesananDetail))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+ERROR - 2025-11-25 11:22:43 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', '', 'reservasi', 3306, '', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pemesan...', Array, false)
+#4 C:\laragon\www\reservasi-wisata\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\reservasi-wisata\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\reservasi-wisata\app\Models\PemesananDetailModel.php(27): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\reservasi-wisata\app\Controllers\PemesananDetail.php(23): App\Models\PemesananDetailModel->getAll()
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\PemesananDetail->index()
+#9 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PemesananDetail))
+#10 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pemesan...', Array, false)
+#3 C:\laragon\www\reservasi-wisata\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\reservasi-wisata\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\reservasi-wisata\app\Models\PemesananDetailModel.php(27): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\reservasi-wisata\app\Controllers\PemesananDetail.php(23): App\Models\PemesananDetailModel->getAll()
+#7 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\PemesananDetail->index()
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PemesananDetail))
+#9 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2025-11-25 11:22:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: pemesanan-detail]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pemesanan_detail`.*, `pemesanan`.`tanggal_pesan`, `penyewa`.`nama_penyewa`
+FROM `pemesanan_detail`
+LEFT JOIN `pemesanan` ON `pemesanan`.`id` = `pemesanan_detail`.`id_pemesanan`
+LEFT JOIN `penyewa` ON `penyewa`.`id` = `pemesanan`.`id_penyewa`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\PemesananDetailModel.php(27): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\PemesananDetail.php(23): App\Models\PemesananDetailModel->getAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PemesananDetail->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PemesananDetail))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-11-25 11:22:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-25 11:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-25 11:23:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-25 11:23:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-25 11:23:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-25 11:23:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-25 11:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-25 11:23:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-25 11:37:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-25 11:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-25 11:37:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-25 11:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-25 11:38:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-25 11:38:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-25 11:38:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-25 11:46:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-25 11:46:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-25 11:47:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-25 11:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-25 11:59:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
