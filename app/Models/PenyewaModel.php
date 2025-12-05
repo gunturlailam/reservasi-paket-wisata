@@ -17,6 +17,7 @@ class PenyewaModel extends Model
         'alamat',
         'no_telp',
         'email',
+        'password'
     ];
 
     protected bool $allowEmptyInserts = false;

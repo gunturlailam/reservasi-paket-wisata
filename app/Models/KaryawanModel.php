@@ -16,7 +16,9 @@ class KaryawanModel extends Model
         'nama_karyawan',
         'alamat',
         'nohp',
-        'id_jabatan'
+        'id_jabatan',
+        'email',
+        'password'
     ];
 
     public function getAll()

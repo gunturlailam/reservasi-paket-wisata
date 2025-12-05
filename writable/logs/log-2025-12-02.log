@@ -1,0 +1,214 @@
+CRITICAL - 2025-12-02 10:37:00 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login_view.php"
+[Method: GET, Route: login]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login_view.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('login_view', [], true)
+ 3 APPPATH\Controllers\Login.php(13): view('login_view')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-12-02 10:37:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-02 10:37:19 --> CodeIgniter\Exceptions\RuntimeException: View themes, no current section.
+[Method: GET, Route: login]
+in SYSTEMPATH\View\View.php on line 430.
+ 1 APPPATH\Views\login_view.php(30): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\login_view.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('login_view', [], true)
+ 5 APPPATH\Controllers\Login.php(13): view('login_view')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-12-02 10:38:29 --> ParseError: syntax error, unexpected token "<", expecting end of file
+[Method: GET, Route: login]
+in APPPATH\Views\login_view.php on line 2.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('login_view', [], true)
+ 3 APPPATH\Controllers\Login.php(13): view('login_view')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-12-02 10:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:39:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:42:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:50:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:50:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:51:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:53:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:54:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:54:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:57:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:57:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:58:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:58:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:59:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 10:59:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:00:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:02:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-02 11:02:13 --> mysqli_sql_exception: Unknown column 'username' in 'field list' in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `id`, `n...', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `n...')
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `n...')
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `n...', Array, false)
+#4 C:\laragon\www\reservasi-wisata\app\Models\UserModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\reservasi-wisata\app\Controllers\Login.php(30): App\Models\UserModel->findUserByCredential('lailamyuro1@gma...')
+#6 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\Login->authenticate()
+#7 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+ERROR - 2025-12-02 11:02:13 --> User lookup failed (karyawan): Unknown column 'username' in 'field list'
+ERROR - 2025-12-02 11:02:13 --> mysqli_sql_exception: Unknown column 'username' in 'field list' in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `id`, `n...', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `n...')
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `n...')
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `n...', Array, false)
+#4 C:\laragon\www\reservasi-wisata\app\Models\UserModel.php(60): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\reservasi-wisata\app\Controllers\Login.php(30): App\Models\UserModel->findUserByCredential('lailamyuro1@gma...')
+#6 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\Login->authenticate()
+#7 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+ERROR - 2025-12-02 11:02:13 --> User lookup failed (penyewa): Unknown column 'username' in 'field list'
+DEBUG - 2025-12-02 11:02:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:02:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-02 11:02:22 --> mysqli_sql_exception: Unknown column 'username' in 'field list' in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `id`, `n...', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `n...')
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `n...')
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `n...', Array, false)
+#4 C:\laragon\www\reservasi-wisata\app\Models\UserModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\reservasi-wisata\app\Controllers\Login.php(30): App\Models\UserModel->findUserByCredential('lailamyuro1@gma...')
+#6 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\Login->authenticate()
+#7 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+ERROR - 2025-12-02 11:02:22 --> User lookup failed (karyawan): Unknown column 'username' in 'field list'
+ERROR - 2025-12-02 11:02:22 --> mysqli_sql_exception: Unknown column 'username' in 'field list' in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `id`, `n...', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `n...')
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `n...')
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `n...', Array, false)
+#4 C:\laragon\www\reservasi-wisata\app\Models\UserModel.php(60): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\reservasi-wisata\app\Controllers\Login.php(30): App\Models\UserModel->findUserByCredential('lailamyuro1@gma...')
+#6 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\Login->authenticate()
+#7 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+ERROR - 2025-12-02 11:02:22 --> User lookup failed (penyewa): Unknown column 'username' in 'field list'
+DEBUG - 2025-12-02 11:02:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:02:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-02 11:02:33 --> mysqli_sql_exception: Unknown column 'username' in 'field list' in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `id`, `n...', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `n...')
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `n...')
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `n...', Array, false)
+#4 C:\laragon\www\reservasi-wisata\app\Models\UserModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\reservasi-wisata\app\Controllers\Login.php(30): App\Models\UserModel->findUserByCredential('lailamyuro1@gma...')
+#6 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\Login->authenticate()
+#7 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+ERROR - 2025-12-02 11:02:33 --> User lookup failed (karyawan): Unknown column 'username' in 'field list'
+ERROR - 2025-12-02 11:02:33 --> mysqli_sql_exception: Unknown column 'username' in 'field list' in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `id`, `n...', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `n...')
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `n...')
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `n...', Array, false)
+#4 C:\laragon\www\reservasi-wisata\app\Models\UserModel.php(60): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\reservasi-wisata\app\Controllers\Login.php(30): App\Models\UserModel->findUserByCredential('lailamyuro1@gma...')
+#6 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\Login->authenticate()
+#7 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+ERROR - 2025-12-02 11:02:33 --> User lookup failed (penyewa): Unknown column 'username' in 'field list'
+DEBUG - 2025-12-02 11:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:05:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:05:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:05:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:05:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:05:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:08:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:08:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:08:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:08:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:10:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:13:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:13:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:13:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:13:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:13:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:14:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:14:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:14:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:14:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:18:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:18:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:19:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 11:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

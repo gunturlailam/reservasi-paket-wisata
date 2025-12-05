@@ -5,7 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+$routes->get('/', 'Login::index');
 
 // JABATAN
 $routes->get('/jabatan', 'Jabatan::index');
@@ -73,3 +73,13 @@ $routes->get('/paketwisata', 'Paketwisata::index');
 $routes->post('/paketwisata/save', 'Paketwisata::save');
 $routes->get('/paketwisata/delete/(:num)', 'Paketwisata::delete/$1');
 $routes->get('/paketwisata/get/(:num)', 'Paketwisata::getbus/$1');
+
+$routes->group('', ['namespace' => 'App\Controllers'], static function ($routes) {
+    // Auth views
+    $routes->get('login', 'Login::index');
+    $routes->post('login/authenticate', 'Login::authenticate');
+    $routes->get('login/dashboard', 'Login::dashboard');
+    $routes->get('logout', 'Login::logout');
+    $routes->get('register', 'Register::register');
+    $routes->post('register/store', 'Register::store');
+});
