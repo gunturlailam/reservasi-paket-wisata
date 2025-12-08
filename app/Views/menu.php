@@ -1,8 +1,8 @@
 <ul>
     <li>
-        <a href="<?= site_url('/') ?>" class="waves-effect">
+        <a href="<?= site_url('/dashboard') ?>" class="waves-effect">
             <i class="mdi mdi-airplay"></i>
-            <span> Beranda </span>
+            <span> Dashboard </span>
         </a>
     </li>
 
@@ -37,5 +37,12 @@
             <li><a href="<?= site_url('/pemberangkatan') ?>">Pemberangkatan</a></li>
             <li><a href="<?= site_url('/pembayaran') ?>">Pembayaran</a></li>
         </ul>
+    </li>
+
+    <li>
+        <a href="<?= site_url('/logout') ?>" class="waves-effect" onclick="return confirm('Apakah Anda yakin ingin logout?')">
+            <i class="mdi mdi-logout"></i>
+            <span> Logout </span>
+        </a>
     </li>
 </ul>

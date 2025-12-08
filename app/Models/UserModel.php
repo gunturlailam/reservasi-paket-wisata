@@ -114,7 +114,7 @@ class UserModel extends Model
     {
         $db = \Config\Database::connect();
         $row = $db->table('karyawan')
-            ->select('id, nama_karyawan AS name, email, nohp AS phone, password')
+            ->select('id, nama_karyawan AS name, email, nohp AS phone, password, foto')
             ->where('email', $email)
             ->get()
             ->getRowArray();
@@ -126,7 +126,7 @@ class UserModel extends Model
     {
         $db = \Config\Database::connect();
         $row = $db->table('penyewa')
-            ->select('id, nama_penyewa AS name, email, no_telp AS phone, password')
+            ->select('id, nama_penyewa AS name, email, no_telp AS phone, password, foto')
             ->where('email', $email)
             ->get()
             ->getRowArray();

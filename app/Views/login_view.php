@@ -106,6 +106,9 @@
             </div>
 
             <button class="btn btn-gradient mt-2" type="submit">Login</button>
+            <div class="text-center mt-3">
+                <a href="<?= site_url('/register') ?>" style="color: #8fb3ff; text-decoration: none;">Belum punya akun? Daftar di sini</a>
+            </div>
         </form>
     </div>
     <script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script>

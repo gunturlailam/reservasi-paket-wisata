@@ -81,7 +81,7 @@
                 </button>
             </div>
         <?php endif; ?>
-        <form method="post" action="<?= site_url('register/store') ?>">
+        <form method="post" action="<?= site_url('register/store') ?>" enctype="multipart/form-data">
             <?= csrf_field() ?>
             <div class="form-group mb-3">
                 <label>Nama Lengkap</label>
@@ -103,6 +103,11 @@
                 <label>Password</label>
                 <input class="form-control" type="password" name="password" required>
             </div>
+            <div class="form-group mb-3">
+                <label>Foto Profil (Opsional)</label>
+                <input class="form-control" type="file" name="foto" accept="image/*">
+                <small class="text-muted">Format: JPG, PNG, GIF (Max 2MB)</small>
+            </div>
             <div class="form-group mb-4">
                 <label>Daftar Sebagai</label>
                 <select class="form-control" name="role" id="role" required onchange="toggleJabatan()">
@@ -123,6 +128,9 @@
                 </select>
             </div>
             <button class="btn btn-gradient mt-2" type="submit">Register</button>
+            <div class="text-center mt-3">
+                <a href="<?= site_url('/login') ?>" style="color: #8fb3ff;">Sudah punya akun? Login</a>
+            </div>
         </form>
     </div>
     <script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script>

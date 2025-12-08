@@ -7,6 +7,12 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Login::index');
 
+// LOGIN & DASHBOARD
+$routes->get('/login', 'Login::index');
+$routes->post('/login/authenticate', 'Login::authenticate');
+$routes->get('/dashboard', 'Login::dashboard');
+$routes->get('/logout', 'Login::logout');
+
 // JABATAN
 $routes->get('/jabatan', 'Jabatan::index');
 $routes->post('/jabatan/save', 'Jabatan::save');
@@ -74,12 +80,6 @@ $routes->post('/paketwisata/save', 'Paketwisata::save');
 $routes->get('/paketwisata/delete/(:num)', 'Paketwisata::delete/$1');
 $routes->get('/paketwisata/get/(:num)', 'Paketwisata::getbus/$1');
 
-$routes->group('', ['namespace' => 'App\Controllers'], static function ($routes) {
-    // Auth views
-    $routes->get('login', 'Login::index');
-    $routes->post('login/authenticate', 'Login::authenticate');
-    $routes->get('login/dashboard', 'Login::dashboard');
-    $routes->get('logout', 'Login::logout');
-    $routes->get('register', 'Register::register');
-    $routes->post('register/store', 'Register::store');
-});
+// REGISTER
+$routes->get('/register', 'Register::register');
+$routes->post('/register/store', 'Register::store');
