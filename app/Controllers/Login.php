@@ -21,24 +21,41 @@ class Login extends BaseController
 
         $email = $request->getPost('email');
         $password = $request->getPost('password');
-        $role = $request->getPost('role');
 
-        if (empty($email) || empty($password) || empty($role)) {
-            $session->setFlashdata('error', 'Email, password, dan role wajib diisi.');
+        if (empty($email) || empty($password)) {
+            $session->setFlashdata('error', 'Email dan password wajib diisi.');
             return redirect()->to('login');
         }
 
         $userModel = new \App\Models\UserModel();
         $user = null;
 
-        if ($role == 'karyawan') {
-            $user = $userModel->findKaryawanByEmail($email);
-        } elseif ($role == 'penyewa') {
+        // Auto-detect user dari semua tabel
+        // 1. Cek di tabel pemilik
+        $user = $userModel->findPemilikByEmail($email);
+
+        // 2. Jika tidak ada, cek di tabel penyewa
+        if (!$user) {
             $user = $userModel->findPenyewaByEmail($email);
         }
 
+        // 3. Jika tidak ada, cek di tabel karyawan untuk admin
         if (!$user) {
-            $session->setFlashdata('error', 'Email tidak ditemukan untuk role tersebut.');
+            $user = $userModel->findAdminByEmail($email);
+        }
+
+        // 4. Jika tidak ada, cek di tabel karyawan untuk supir
+        if (!$user) {
+            $user = $userModel->findSupirByEmail($email);
+        }
+
+        // 5. Jika tidak ada, cek di tabel karyawan biasa
+        if (!$user) {
+            $user = $userModel->findKaryawanByEmail($email);
+        }
+
+        if (!$user) {
+            $session->setFlashdata('error', 'Email tidak ditemukan.');
             return redirect()->to('login');
         }
 
@@ -47,16 +64,17 @@ class Login extends BaseController
             return redirect()->to('login');
         }
 
+        // Set session dengan role dari database
         $session->set([
             'user_id' => $user['id'],
             'user_name' => $user['name'] ?? 'User',
             'user_email' => $user['email'],
-            'user_role' => $role,
+            'user_role' => $user['role'], // Role otomatis dari database
             'user_foto' => $user['foto'] ?? null,
             'isLoggedIn' => true
         ]);
 
-        // Redirect ke dashboard (main.php)
+        // Redirect ke dashboard
         return redirect()->to('/dashboard');
     }
 

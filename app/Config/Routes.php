@@ -80,6 +80,33 @@ $routes->post('/paketwisata/save', 'Paketwisata::save');
 $routes->get('/paketwisata/delete/(:num)', 'Paketwisata::delete/$1');
 $routes->get('/paketwisata/get/(:num)', 'Paketwisata::getbus/$1');
 
+// PEMILIK
+$routes->get('/pemilik', 'Pemilik::index');
+$routes->post('/pemilik/save', 'Pemilik::save');
+$routes->get('/pemilik/delete/(:num)', 'Pemilik::delete/$1');
+$routes->get('/pemilik/get/(:num)', 'Pemilik::getpemilik/$1');
+
+// PEMILIK
+$routes->get('/pemilik', 'Pemilik::index');
+$routes->post('/pemilik/save', 'Pemilik::save');
+$routes->get('/pemilik/delete/(:num)', 'Pemilik::delete/$1');
+$routes->get('/pemilik/get/(:num)', 'Pemilik::getpemilik/$1');
+
 // REGISTER
 $routes->get('/register', 'Register::register');
 $routes->post('/register/store', 'Register::store');
+
+// ADMIN DASHBOARD
+$routes->get('admin/dashboard', 'Admin::dashboard');
+
+// KARYAWAN DASHBOARD
+$routes->get('karyawan/dashboard', 'Karyawan::dashboard');
+
+// PENYEWA DASHBOARD
+$routes->get('penyewa/dashboard', 'Penyewa::dashboard');
+
+// SUPIR DASHBOARD
+$routes->get('supir/dashboard', 'Supir::dashboard');
+
+// PEMILIK DASHBOARD
+$routes->get('pemilik/dashboard', 'Pemilik::dashboard');

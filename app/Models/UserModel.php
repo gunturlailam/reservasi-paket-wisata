@@ -112,10 +112,14 @@ class UserModel extends Model
 
     public function findKaryawanByEmail(string $email): ?array
     {
+        // Karyawan biasa (bukan Admin atau Supir)
         $db = \Config\Database::connect();
         $row = $db->table('karyawan')
-            ->select('id, nama_karyawan AS name, email, nohp AS phone, password, foto')
-            ->where('email', $email)
+            ->select('karyawan.id, karyawan.nama_karyawan AS name, karyawan.email, karyawan.nohp AS phone, karyawan.password, karyawan.foto')
+            ->join('jabatan', 'jabatan.id = karyawan.id_jabatan', 'left')
+            ->where('karyawan.email', $email)
+            ->where('LOWER(jabatan.nama_jabatan) !=', 'admin')
+            ->where('LOWER(jabatan.nama_jabatan) !=', 'supir')
             ->get()
             ->getRowArray();
         if ($row) $row['role'] = 'karyawan';
@@ -133,6 +137,50 @@ class UserModel extends Model
         if ($row) $row['role'] = 'penyewa';
         return $row ?: null;
     }
+
+    public function findPemilikByEmail(string $email): ?array
+    {
+        $db = \Config\Database::connect();
+        $row = $db->table('pemilik')
+            ->select('id, nama_pemilik AS name, email, nohp AS phone, password, foto')
+            ->where('email', $email)
+            ->get()
+            ->getRowArray();
+        if ($row) $row['role'] = 'pemilik';
+        return $row ?: null;
+    }
+
+    public function findSupirByEmail(string $email): ?array
+    {
+        // Supir adalah karyawan dengan nama_jabatan = "Sopir"
+        $db = \Config\Database::connect();
+        $row = $db->table('karyawan')
+            ->select('karyawan.id, karyawan.nama_karyawan AS name, karyawan.email, karyawan.nohp AS phone, karyawan.password, karyawan.foto')
+            ->join('jabatan', 'jabatan.id = karyawan.id_jabatan', 'left')
+            ->where('karyawan.email', $email)
+            ->where('LOWER(jabatan.nama_jabatan)', 'sopir') // Case-insensitive match untuk "Sopir"
+            ->get()
+            ->getRowArray();
+        if ($row) $row['role'] = 'supir';
+        return $row ?: null;
+    }
+
+    public function findAdminByEmail(string $email): ?array
+    {
+        // Admin adalah karyawan dengan nama_jabatan = "Admin"
+        $db = \Config\Database::connect();
+        $row = $db->table('karyawan')
+            ->select('karyawan.id, karyawan.nama_karyawan AS name, karyawan.email, karyawan.nohp AS phone, karyawan.password, karyawan.foto')
+            ->join('jabatan', 'jabatan.id = karyawan.id_jabatan', 'left')
+            ->where('karyawan.email', $email)
+            ->where('LOWER(jabatan.nama_jabatan)', 'admin') // Case-insensitive match untuk "Admin"
+            ->get()
+            ->getRowArray();
+        if ($row) $row['role'] = 'admin';
+        return $row ?: null;
+    }
+
+
 
     public function verifyPassword(?string $hashOrPlain, string $inputPassword): bool
     {

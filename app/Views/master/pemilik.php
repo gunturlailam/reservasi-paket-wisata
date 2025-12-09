@@ -4,8 +4,8 @@
 <div class="container-fluid p-4">
     <div class="d-flex flex-wrap align-items-center justify-content-between mb-3 gap-2">
         <div>
-            <h3 class="mb-0">Data Karyawan</h3>
-            <p class="text-muted mb-0">Ngatur karyawan biar makin rapi.</p>
+            <h3 class="mb-0">Data Pemilik</h3>
+            <p class="text-muted mb-0">Kelola data pemilik perusahaan.</p>
         </div>
 
         <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalForm" onclick="tambah()">
@@ -39,16 +39,15 @@
                         <tr>
                             <th style="width: 80px;">ID</th>
                             <th style="width: 80px;">Foto</th>
-                            <th>Nama Karyawan</th>
+                            <th>Nama Pemilik</th>
                             <th>Email</th>
                             <th>No HP</th>
                             <th>Alamat</th>
-                            <th>Jabatan</th>
                             <th style="width: 180px;">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($karyawan as $row) : ?>
+                        <?php foreach ($pemilik as $row) : ?>
                             <tr>
                                 <td><?= esc($row['id']) ?></td>
                                 <td>
@@ -57,22 +56,21 @@
                                             alt="Foto" class="rounded"
                                             style="width: 50px; height: 50px; object-fit: cover;">
                                     <?php else: ?>
-                                        <div class="rounded bg-secondary text-white d-flex align-items-center justify-content-center"
+                                        <div class="rounded bg-primary text-white d-flex align-items-center justify-content-center"
                                             style="width: 50px; height: 50px; font-size: 20px;">
-                                            <?= strtoupper(substr($row['nama_karyawan'], 0, 1)) ?>
+                                            <?= strtoupper(substr($row['nama_pemilik'], 0, 1)) ?>
                                         </div>
                                     <?php endif; ?>
                                 </td>
-                                <td><?= esc($row['nama_karyawan']) ?></td>
-                                <td><?= esc($row['email'] ?? '-') ?></td>
-                                <td><?= esc($row['nohp']) ?></td>
-                                <td><?= esc($row['alamat']) ?></td>
-                                <td><?= esc($row['nama_jabatan']) ?></td>
+                                <td><?= esc($row['nama_pemilik']) ?></td>
+                                <td><?= esc($row['email']) ?></td>
+                                <td><?= esc($row['nohp'] ?? '-') ?></td>
+                                <td><?= esc($row['alamat'] ?? '-') ?></td>
                                 <td class="text-nowrap">
                                     <button class="btn btn-warning btn-sm me-1" onclick="edit(<?= $row['id'] ?>)">
                                         <i class="mdi mdi-pencil"></i> Edit
                                     </button>
-                                    <a href="<?= site_url('/karyawan/delete/' . $row['id']) ?>"
+                                    <a href="<?= site_url('/pemilik/delete/' . $row['id']) ?>"
                                         class="btn btn-danger btn-sm"
                                         onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
                                         <i class="mdi mdi-delete"></i> Hapus
@@ -81,9 +79,9 @@
                             </tr>
                         <?php endforeach; ?>
 
-                        <?php if (empty($karyawan)) : ?>
+                        <?php if (empty($pemilik)) : ?>
                             <tr>
-                                <td colspan="8" class="text-center text-muted">Belum ada data karyawan, yuk tambah dulu.</td>
+                                <td colspan="7" class="text-center text-muted">Belum ada data pemilik.</td>
                             </tr>
                         <?php endif; ?>
                     </tbody>
@@ -96,9 +94,9 @@
 <!-- Modal Form -->
 <div class="modal fade" id="modalForm" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg">
-        <form action="<?= site_url('/karyawan/save') ?>" method="post" enctype="multipart/form-data" class="modal-content">
+        <form action="<?= site_url('/pemilik/save') ?>" method="post" enctype="multipart/form-data" class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="modalTitle">Tambah Karyawan</h5>
+                <h5 class="modal-title" id="modalTitle">Tambah Pemilik</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -109,8 +107,8 @@
 
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label for="nama_karyawan" class="form-label">Nama Karyawan *</label>
-                        <input type="text" name="nama_karyawan" id="nama_karyawan" class="form-control" required>
+                        <label for="nama_pemilik" class="form-label">Nama Pemilik *</label>
+                        <input type="text" name="nama_pemilik" id="nama_pemilik" class="form-control" required>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="email" class="form-label">Email *</label>
@@ -120,29 +118,19 @@
 
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label for="nohp" class="form-label">No HP *</label>
-                        <input type="text" name="nohp" id="nohp" class="form-control" required>
+                        <label for="nohp" class="form-label">No HP</label>
+                        <input type="text" name="nohp" id="nohp" class="form-control">
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="id_jabatan" class="form-label">Jabatan *</label>
-                        <select name="id_jabatan" id="id_jabatan" class="form-control" required>
-                            <option value="">Pilih Jabatan</option>
-                            <?php foreach ($jabatan as $j) : ?>
-                                <option value="<?= esc($j['id']) ?>"><?= esc($j['nama_jabatan']) ?></option>
-                            <?php endforeach; ?>
-                        </select>
+                        <label for="password" class="form-label">Password <span class="text-muted">(Kosongkan jika tidak ingin mengubah)</span></label>
+                        <input type="password" name="password" id="password" class="form-control">
+                        <small class="text-muted">Minimal 6 karakter</small>
                     </div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="alamat" class="form-label">Alamat *</label>
-                    <textarea name="alamat" id="alamat" class="form-control" rows="2" required></textarea>
-                </div>
-
-                <div class="mb-3">
-                    <label for="password" class="form-label">Password <span class="text-muted">(Kosongkan jika tidak ingin mengubah)</span></label>
-                    <input type="password" name="password" id="password" class="form-control">
-                    <small class="text-muted">Minimal 6 karakter</small>
+                    <label for="alamat" class="form-label">Alamat</label>
+                    <textarea name="alamat" id="alamat" class="form-control" rows="2"></textarea>
                 </div>
 
                 <div class="mb-3">
@@ -163,13 +151,12 @@
 
 <script>
     function tambah() {
-        document.getElementById('modalTitle').innerText = 'Tambah Karyawan';
+        document.getElementById('modalTitle').innerText = 'Tambah Pemilik';
         document.getElementById('id').value = '';
-        document.getElementById('nama_karyawan').value = '';
+        document.getElementById('nama_pemilik').value = '';
         document.getElementById('email').value = '';
         document.getElementById('nohp').value = '';
         document.getElementById('alamat').value = '';
-        document.getElementById('id_jabatan').value = '';
         document.getElementById('password').value = '';
         document.getElementById('password').required = true;
         document.getElementById('foto').value = '';
@@ -177,16 +164,15 @@
     }
 
     function edit(id) {
-        fetch('<?= site_url('/karyawan/get/') ?>' + id)
+        fetch('<?= site_url('/pemilik/get/') ?>' + id)
             .then((response) => response.json())
             .then((data) => {
-                document.getElementById('modalTitle').innerText = 'Edit Karyawan';
+                document.getElementById('modalTitle').innerText = 'Edit Pemilik';
                 document.getElementById('id').value = data.id;
-                document.getElementById('nama_karyawan').value = data.nama_karyawan;
-                document.getElementById('email').value = data.email || '';
-                document.getElementById('nohp').value = data.nohp;
-                document.getElementById('alamat').value = data.alamat;
-                document.getElementById('id_jabatan').value = data.id_jabatan;
+                document.getElementById('nama_pemilik').value = data.nama_pemilik;
+                document.getElementById('email').value = data.email;
+                document.getElementById('nohp').value = data.nohp || '';
+                document.getElementById('alamat').value = data.alamat || '';
                 document.getElementById('password').value = '';
                 document.getElementById('password').required = false;
 

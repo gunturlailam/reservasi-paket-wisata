@@ -31,6 +31,23 @@ class Register extends Controller
         $alamat = $this->request->getPost('alamat');
         $nohp = $this->request->getPost('nohp');
 
+        // Validasi email unik - cek di semua tabel
+        $db = \Config\Database::connect();
+
+        // Cek di tabel karyawan
+        $existsInKaryawan = $db->table('karyawan')->where('email', $email)->countAllResults() > 0;
+
+        // Cek di tabel penyewa
+        $existsInPenyewa = $db->table('penyewa')->where('email', $email)->countAllResults() > 0;
+
+        // Cek di tabel pemilik
+        $existsInPemilik = $db->table('pemilik')->where('email', $email)->countAllResults() > 0;
+
+        if ($existsInKaryawan || $existsInPenyewa || $existsInPemilik) {
+            session()->setFlashdata('error', 'Email sudah terdaftar. Silakan gunakan email lain atau login.');
+            return redirect()->to('/register')->withInput();
+        }
+
         // Handle upload foto
         $foto = $this->request->getFile('foto');
         $fotoName = null;
@@ -43,23 +60,8 @@ class Register extends Controller
             $foto->move(WRITEPATH . '../public/uploads', $fotoName);
         }
 
-        if ($role == 'karyawan') {
-            $model = new \App\Models\KaryawanModel();
-            $data = [
-                'nama_karyawan' => $nama,
-                'email'         => $email,
-                'nohp'          => $nohp,
-                'password'      => $password,
-                'alamat'        => $alamat,
-                'id_jabatan'    => $this->request->getPost('id_jabatan'),
-            ];
-
-            if ($fotoName) {
-                $data['foto'] = $fotoName;
-            }
-
-            $model->insert($data);
-        } elseif ($role == 'penyewa') {
+        // Hanya penyewa yang bisa register
+        if ($role == 'penyewa') {
             $model = new \App\Models\PenyewaModel();
             $data = [
                 'nama_penyewa' => $nama,
@@ -74,6 +76,8 @@ class Register extends Controller
             }
 
             $model->insert($data);
+        } else {
+            return redirect()->to('/register')->with('error', 'Hanya penyewa yang bisa mendaftar melalui halaman ini.');
         }
 
         return redirect()->to('/login')->with('success', 'Registrasi berhasil, silakan login.');

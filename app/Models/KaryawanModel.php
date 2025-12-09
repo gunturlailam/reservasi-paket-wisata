@@ -19,12 +19,13 @@ class KaryawanModel extends Model
         'id_jabatan',
         'email',
         'password',
-        'foto'
+        'foto',
+        'role'
     ];
 
     public function getAll()
     {
-        return $this->select('karyawan.id,jabatan.nama_jabatan, karyawan.nama_karyawan, karyawan.alamat,karyawan.nohp, karyawan.id_jabatan')
+        return $this->select('karyawan.id, karyawan.nama_karyawan, karyawan.email, karyawan.nohp, karyawan.alamat, karyawan.foto, karyawan.id_jabatan, jabatan.nama_jabatan')
             ->join('jabatan', 'jabatan.id = karyawan.id_jabatan', 'left')
             ->findAll();
     }

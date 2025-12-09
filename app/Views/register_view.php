@@ -108,25 +108,8 @@
                 <input class="form-control" type="file" name="foto" accept="image/*">
                 <small class="text-muted">Format: JPG, PNG, GIF (Max 2MB)</small>
             </div>
-            <div class="form-group mb-4">
-                <label>Daftar Sebagai</label>
-                <select class="form-control" name="role" id="role" required onchange="toggleJabatan()">
-                    <option value="">-- Pilih --</option>
-                    <option value="karyawan">Karyawan</option>
-                    <option value="penyewa">Penyewa</option>
-                </select>
-            </div>
-            <div class="form-group mb-4" id="jabatan-group" style="display:none;">
-                <label>Pilih Jabatan</label>
-                <select class="form-control" name="id_jabatan">
-                    <option value="">-- Pilih Jabatan --</option>
-                    <?php if (!empty($jabatan)): ?>
-                        <?php foreach ($jabatan as $j): ?>
-                            <option value="<?= $j['id'] ?>"><?= $j['nama_jabatan'] ?></option>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
-                </select>
-            </div>
+            <!-- Role hidden, hanya penyewa yang bisa register -->
+            <input type="hidden" name="role" value="penyewa">
             <button class="btn btn-gradient mt-2" type="submit">Register</button>
             <div class="text-center mt-3">
                 <a href="<?= site_url('/login') ?>" style="color: #8fb3ff;">Sudah punya akun? Login</a>
@@ -134,12 +117,7 @@
         </form>
     </div>
     <script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script>
-    <script>
-        function toggleJabatan() {
-            var role = document.getElementById('role').value;
-            document.getElementById('jabatan-group').style.display = (role === 'karyawan') ? 'block' : 'none';
-        }
-    </script>
+
 </body>
 
 </html>

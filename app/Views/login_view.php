@@ -96,16 +96,7 @@
                 <input class="form-control" type="password" name="password" placeholder="Masukkan password" required>
             </div>
 
-            <div class="form-group mb-3">
-                <label>Login Sebagai</label>
-                <select class="form-control" name="role" required>
-                    <option value="">-- Pilih Role --</option>
-                    <option value="karyawan">Karyawan</option>
-                    <option value="penyewa">Penyewa</option>
-                </select>
-            </div>
-
-            <button class="btn btn-gradient mt-2" type="submit">Login</button>
+            <button class="btn btn-gradient mt-3" type="submit">Login</button>
             <div class="text-center mt-3">
                 <a href="<?= site_url('/register') ?>" style="color: #8fb3ff; text-decoration: none;">Belum punya akun? Daftar di sini</a>
             </div>

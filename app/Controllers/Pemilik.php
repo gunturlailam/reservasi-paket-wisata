@@ -3,26 +3,21 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use CodeIgniter\HTTP\ResponseInterface;
-use App\Models\KaryawanModel;
-use App\Models\JabatanModel;
+use App\Models\PemilikModel;
 
-class Karyawan extends BaseController
+class Pemilik extends BaseController
 {
-    protected $jabatanModel;
-    protected $karyawanModel;
+    protected $pemilikModel;
 
     public function __construct()
     {
-        $this->karyawanModel = new KaryawanModel;
-        $this->jabatanModel = new JabatanModel();
+        $this->pemilikModel = new PemilikModel();
     }
 
     public function index()
     {
-        $data['karyawan'] =  $this->karyawanModel->getAll();
-        $data['jabatan'] =  $this->jabatanModel->findAll();
-        return view('/master/karyawan', $data);
+        $data['pemilik'] = $this->pemilikModel->findAll();
+        return view('/master/pemilik', $data);
     }
 
     public function save()
@@ -33,18 +28,18 @@ class Karyawan extends BaseController
         // Validasi email unik - cek di semua tabel kecuali data yang sedang diedit
         $db = \Config\Database::connect();
 
-        // Cek di tabel karyawan (kecuali data yang sedang diedit)
-        $queryKaryawan = $db->table('karyawan')->where('email', $email);
-        if ($id) {
-            $queryKaryawan->where('id !=', $id);
-        }
-        $existsInKaryawan = $queryKaryawan->countAllResults() > 0;
+        // Cek di tabel karyawan
+        $existsInKaryawan = $db->table('karyawan')->where('email', $email)->countAllResults() > 0;
 
         // Cek di tabel penyewa
         $existsInPenyewa = $db->table('penyewa')->where('email', $email)->countAllResults() > 0;
 
-        // Cek di tabel pemilik
-        $existsInPemilik = $db->table('pemilik')->where('email', $email)->countAllResults() > 0;
+        // Cek di tabel pemilik (kecuali data yang sedang diedit)
+        $queryPemilik = $db->table('pemilik')->where('email', $email);
+        if ($id) {
+            $queryPemilik->where('id !=', $id);
+        }
+        $existsInPemilik = $queryPemilik->countAllResults() > 0;
 
         if ($existsInKaryawan || $existsInPenyewa || $existsInPemilik) {
             session()->setFlashdata('error', 'Email sudah terdaftar. Silakan gunakan email lain.');
@@ -52,11 +47,10 @@ class Karyawan extends BaseController
         }
 
         $data = [
-            'nama_karyawan' => $this->request->getPost('nama_karyawan'),
+            'nama_pemilik' => $this->request->getPost('nama_pemilik'),
             'email' => $email,
-            'alamat' => $this->request->getPost('alamat'),
             'nohp' => $this->request->getPost('nohp'),
-            'id_jabatan' => $this->request->getPost('id_jabatan'),
+            'alamat' => $this->request->getPost('alamat'),
         ];
 
         // Handle password
@@ -70,7 +64,7 @@ class Karyawan extends BaseController
         if ($foto && $foto->isValid() && !$foto->hasMoved()) {
             // Hapus foto lama jika update
             if ($id) {
-                $oldData = $this->karyawanModel->find($id);
+                $oldData = $this->pemilikModel->find($id);
                 if (!empty($oldData['foto']) && file_exists(FCPATH . 'uploads/' . $oldData['foto'])) {
                     unlink(FCPATH . 'uploads/' . $oldData['foto']);
                 }
@@ -84,7 +78,7 @@ class Karyawan extends BaseController
 
         if ($id) {
             // Update
-            $this->karyawanModel->update($id, $data);
+            $this->pemilikModel->update($id, $data);
             session()->setFlashdata('success', 'Data berhasil diperbarui');
         } else {
             // Insert - password wajib untuk data baru
@@ -92,23 +86,29 @@ class Karyawan extends BaseController
                 session()->setFlashdata('error', 'Password wajib diisi untuk data baru');
                 return redirect()->back()->withInput();
             }
-            $this->karyawanModel->insert($data);
+            $this->pemilikModel->insert($data);
             session()->setFlashdata('success', 'Data berhasil ditambahkan');
         }
 
-        return redirect()->to('/karyawan');
+        return redirect()->to('/pemilik');
     }
 
     public function delete($id)
     {
-        $this->karyawanModel->delete($id);
+        // Hapus foto jika ada
+        $data = $this->pemilikModel->find($id);
+        if (!empty($data['foto']) && file_exists(FCPATH . 'uploads/' . $data['foto'])) {
+            unlink(FCPATH . 'uploads/' . $data['foto']);
+        }
+
+        $this->pemilikModel->delete($id);
         session()->setFlashdata('success', 'Data berhasil dihapus!');
-        return redirect()->to('/karyawan');
+        return redirect()->to('/pemilik');
     }
 
-    public function getkaryawan($id)
+    public function getpemilik($id)
     {
-        $data = $this->karyawanModel->find($id);
+        $data = $this->pemilikModel->find($id);
         return $this->response->setJSON($data);
     }
 }
