@@ -18,8 +18,22 @@ class Karyawan extends BaseController
         $this->jabatanModel = new JabatanModel();
     }
 
+    // Fungsi untuk cek login
+    private function checkLogin()
+    {
+        $session = session();
+        if (!$session->get('isLoggedIn')) {
+            return redirect()->to('/login');
+        }
+        return null;
+    }
+
     public function index()
     {
+        // Cek login
+        $login = $this->checkLogin();
+        if ($login) return $login;
+
         $data['karyawan'] =  $this->karyawanModel->getAll();
         $data['jabatan'] =  $this->jabatanModel->findAll();
         return view('/master/karyawan', $data);
@@ -27,6 +41,10 @@ class Karyawan extends BaseController
 
     public function save()
     {
+        // Cek login
+        $login = $this->checkLogin();
+        if ($login) return $login;
+
         $id = $this->request->getPost('id');
         $email = $this->request->getPost('email');
 
@@ -101,6 +119,10 @@ class Karyawan extends BaseController
 
     public function delete($id)
     {
+        // Cek login
+        $login = $this->checkLogin();
+        if ($login) return $login;
+
         $this->karyawanModel->delete($id);
         session()->setFlashdata('success', 'Data berhasil dihapus!');
         return redirect()->to('/karyawan');
@@ -108,6 +130,10 @@ class Karyawan extends BaseController
 
     public function getkaryawan($id)
     {
+        // Cek login
+        $login = $this->checkLogin();
+        if ($login) return $login;
+
         $data = $this->karyawanModel->find($id);
         return $this->response->setJSON($data);
     }
