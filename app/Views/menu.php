@@ -63,8 +63,8 @@ $userRole = $session->get('user_role');
         </li>
     <?php endif; ?>
 
-    <?php if ($userRole === 'admin' || $userRole === 'karyawan' || $userRole === 'supir'): ?>
-        <!-- Jadwal Keberangkatan - Admin, Karyawan, Supir -->
+    <?php if ($userRole === 'admin' || $userRole === 'karyawan' || $userRole === 'supir' || $userRole === 'pemilik'): ?>
+        <!-- Jadwal Keberangkatan - Admin, Karyawan, Supir, Pemilik -->
         <li>
             <a href="<?= site_url('/pemberangkatan') ?>" class="waves-effect">
                 <i class="mdi mdi-calendar-clock"></i>
@@ -83,9 +83,18 @@ $userRole = $session->get('user_role');
             </a>
 
             <ul class="list-unstyled">
-                <li><a href="<?= site_url('/pemesanan/laporan') ?>">Laporan Pemesanan</a></li>
-                <li><a href="<?= site_url('/pembayaran/laporan') ?>">Laporan Pembayaran</a></li>
-                <li><a href="<?= site_url('/pemberangkatan/laporan') ?>">Laporan Keberangkatan</a></li>
+                <li><a href="<?= site_url('/laporanpemesanan') ?>">Laporan Pemesanan</a></li>
+                <li><a href="<?= site_url('/laporanpembayaran') ?>">Laporan Pembayaran</a></li>
+                <li><a href="<?= site_url('/laporanpemesanandetail') ?>">Laporan Detail Pemesanan</a></li>
+                <li><a href="<?= site_url('/laporanpemberangkatan') ?>">Laporan Keberangkatan</a></li>
+                <li><a href="<?= site_url('/laporankaryawan') ?>">Laporan Karyawan</a></li>
+                <li><a href="<?= site_url('/laporanjabatan') ?>">Laporan Jabatan</a></li>
+                <li><a href="<?= site_url('/laporanjenisbus') ?>">Laporan Jenis Bus</a></li>
+                <li><a href="<?= site_url('/laporanbus') ?>">Laporan Bus</a></li>
+                <li><a href="<?= site_url('/laporanpaketwisata') ?>">Laporan Paket Wisata</a></li>
+                <li><a href="<?= site_url('/laporanpaketbus') ?>">Laporan Paket Bus</a></li>
+                <li><a href="<?= site_url('/laporanpemilik') ?>">Laporan Pemilik</a></li>
+                <li><a href="<?= site_url('/laporanpenyewa') ?>">Laporan Penyewa</a></li>
             </ul>
         </li>
     <?php endif; ?>

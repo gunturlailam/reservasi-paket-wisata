@@ -9,8 +9,8 @@
         </div>
 
         <div class="d-flex gap-3">
-            <a href="<?= site_url('/pemesanan/laporan') ?>" class="btn btn-info" target="_blank">
-                <i class="mdi mdi-file-document"></i> Laporan
+            <a href="<?= site_url('/laporanpemesanan/cetak') ?>" class="btn btn-info" target="_blank">
+                <i class="mdi mdi-printer"></i> Cetak Laporan
             </a>
             <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalForm" onclick="tambah()">
                 <i class="mdi mdi-plus"></i> Tambah Data

@@ -8,16 +8,21 @@
             <p class="text-muted mb-0">Ngatur role tim biar kerjaan makin rapi.</p>
         </div>
 
-        <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalForm" onclick="tambah()">
-            <i class="mdi mdi-plus"></i> Tambah Data
-        </button>
+        <div class="d-flex gap-2">
+            <a href="<?= site_url('/laporanjabatan/cetak') ?>" class="btn btn-info" target="_blank">
+                <i class="mdi mdi-printer"></i> Cetak Laporan
+            </a>
+            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalForm" onclick="tambah()">
+                <i class="mdi mdi-plus"></i> Tambah Data
+            </button>
+        </div>
     </div>
 
     <?php if (session()->getFlashdata('success')) : ?>
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <?= session()->getFlashdata('success') ?>
-        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    </div>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <?= session()->getFlashdata('success') ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
     <?php endif; ?>
 
     <div class="card">
@@ -33,25 +38,25 @@
                     </thead>
                     <tbody>
                         <?php foreach ($jabatan as $row) : ?>
-                        <tr>
-                            <td><?= esc($row['id']) ?></td>
-                            <td><?= esc($row['nama_jabatan']) ?></td>
-                            <td class="text-nowrap">
-                                <button class="btn btn-warning btn-sm me-1" onclick="edit(<?= $row['id'] ?>)">
-                                    <i class="mdi mdi-pencil"></i> Edit
-                                </button>
-                                <a href="<?= site_url('/jabatan/delete/' . $row['id']) ?>" class="btn btn-danger btn-sm"
-                                    onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
-                                    <i class="mdi mdi-delete"></i> Hapus
-                                </a>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td><?= esc($row['id']) ?></td>
+                                <td><?= esc($row['nama_jabatan']) ?></td>
+                                <td class="text-nowrap">
+                                    <button class="btn btn-warning btn-sm me-1" onclick="edit(<?= $row['id'] ?>)">
+                                        <i class="mdi mdi-pencil"></i> Edit
+                                    </button>
+                                    <a href="<?= site_url('/jabatan/delete/' . $row['id']) ?>" class="btn btn-danger btn-sm"
+                                        onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
+                                        <i class="mdi mdi-delete"></i> Hapus
+                                    </a>
+                                </td>
+                            </tr>
                         <?php endforeach; ?>
 
                         <?php if (empty($jabatan)) : ?>
-                        <tr>
-                            <td colspan="3" class="text-center text-muted">Belum ada data jabatan, yuk tambah dulu.</td>
-                        </tr>
+                            <tr>
+                                <td colspan="3" class="text-center text-muted">Belum ada data jabatan, yuk tambah dulu.</td>
+                            </tr>
                         <?php endif; ?>
                     </tbody>
                 </table>
@@ -89,24 +94,24 @@
 </div>
 
 <script>
-function tambah() {
-    document.getElementById('modalTitle').innerText = 'Tambah Jabatan';
-    document.getElementById('id').value = '';
-    document.getElementById('nama_jabatan').value = '';
-}
+    function tambah() {
+        document.getElementById('modalTitle').innerText = 'Tambah Jabatan';
+        document.getElementById('id').value = '';
+        document.getElementById('nama_jabatan').value = '';
+    }
 
-function edit(id) {
-    fetch('<?= site_url('/jabatan/get/') ?>' + id)
-        .then((response) => response.json())
-        .then((data) => {
-            document.getElementById('modalTitle').innerText = 'Edit Jabatan';
-            document.getElementById('id').value = data.id;
-            document.getElementById('nama_jabatan').value = data.nama_jabatan;
+    function edit(id) {
+        fetch('<?= site_url('/jabatan/get/') ?>' + id)
+            .then((response) => response.json())
+            .then((data) => {
+                document.getElementById('modalTitle').innerText = 'Edit Jabatan';
+                document.getElementById('id').value = data.id;
+                document.getElementById('nama_jabatan').value = data.nama_jabatan;
 
-            const modal = new bootstrap.Modal(document.getElementById('modalForm'));
-            modal.show();
-        });
-}
+                const modal = new bootstrap.Modal(document.getElementById('modalForm'));
+                modal.show();
+            });
+    }
 </script>
 
 <?= $this->endSection(); ?>

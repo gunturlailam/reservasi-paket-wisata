@@ -25,14 +25,141 @@ class Pemberangkatan extends BaseController
 
     public function index()
     {
+        $session = session();
+        $userRole = $session->get('user_role');
+
         $data = [
             'pemberangkatan' => $this->pemberangkatanModel->getAll(),
             'pemesanan' => $this->pemesananModel->findAll(),
             'bus' => $this->busModel->findAll(),
             'karyawan' => $this->karyawanModel->findAll(),
+            'userRole' => $userRole,
         ];
 
         return view('transaksi/pemberangkatan', $data);
+    }
+
+    public function create()
+    {
+        $session = session();
+        $userRole = $session->get('user_role');
+
+        // Hanya admin dan karyawan yang bisa tambah
+        if ($userRole !== 'admin' && $userRole !== 'karyawan') {
+            return redirect()->to('/pemberangkatan')->with('error', 'Anda tidak memiliki akses untuk menambah data');
+        }
+
+        $data = [
+            'pemesanan' => $this->pemesananModel->findAll(),
+            'bus' => $this->busModel->findAll(),
+            'karyawan' => $this->karyawanModel->findAll(),
+        ];
+
+        return view('transaksi/pemberangkatan/create', $data);
+    }
+
+    public function store()
+    {
+        $session = session();
+        $userRole = $session->get('user_role');
+
+        // Hanya admin dan karyawan yang bisa simpan
+        if ($userRole !== 'admin' && $userRole !== 'karyawan') {
+            return redirect()->to('/pemberangkatan')->with('error', 'Anda tidak memiliki akses untuk menambah data');
+        }
+
+        $rules = [
+            'id_pemesanan' => 'required|numeric',
+            'id_bus' => 'required|numeric',
+            'id_sopir' => 'required|numeric',
+            'id_kernet' => 'required|numeric',
+            'tanggal_berangkat' => 'required|valid_date[Y-m-d]',
+        ];
+
+        if (!$this->validate($rules)) {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
+
+        $this->pemberangkatanModel->insert([
+            'id_pemesanan' => $this->request->getPost('id_pemesanan'),
+            'id_bus' => $this->request->getPost('id_bus'),
+            'id_sopir' => $this->request->getPost('id_sopir'),
+            'id_kernet' => $this->request->getPost('id_kernet'),
+            'tanggal_berangkat' => $this->request->getPost('tanggal_berangkat'),
+        ]);
+
+        return redirect()->to('/pemberangkatan')->with('success', 'Data pemberangkatan berhasil ditambahkan');
+    }
+
+    public function edit($id)
+    {
+        $session = session();
+        $userRole = $session->get('user_role');
+
+        // Hanya admin dan karyawan yang bisa edit
+        if ($userRole !== 'admin' && $userRole !== 'karyawan') {
+            return redirect()->to('/pemberangkatan')->with('error', 'Anda tidak memiliki akses untuk edit data');
+        }
+
+        $data = [
+            'pemberangkatan' => $this->pemberangkatanModel->find($id),
+            'pemesanan' => $this->pemesananModel->findAll(),
+            'bus' => $this->busModel->findAll(),
+            'karyawan' => $this->karyawanModel->findAll(),
+        ];
+
+        if (!$data['pemberangkatan']) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data pemberangkatan tidak ditemukan');
+        }
+
+        return view('transaksi/pemberangkatan/edit', $data);
+    }
+
+    public function update($id)
+    {
+        $session = session();
+        $userRole = $session->get('user_role');
+
+        // Hanya admin dan karyawan yang bisa update
+        if ($userRole !== 'admin' && $userRole !== 'karyawan') {
+            return redirect()->to('/pemberangkatan')->with('error', 'Anda tidak memiliki akses untuk edit data');
+        }
+
+        $rules = [
+            'id_pemesanan' => 'required|numeric',
+            'id_bus' => 'required|numeric',
+            'id_sopir' => 'required|numeric',
+            'id_kernet' => 'required|numeric',
+            'tanggal_berangkat' => 'required|valid_date[Y-m-d]',
+        ];
+
+        if (!$this->validate($rules)) {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
+
+        $this->pemberangkatanModel->update($id, [
+            'id_pemesanan' => $this->request->getPost('id_pemesanan'),
+            'id_bus' => $this->request->getPost('id_bus'),
+            'id_sopir' => $this->request->getPost('id_sopir'),
+            'id_kernet' => $this->request->getPost('id_kernet'),
+            'tanggal_berangkat' => $this->request->getPost('tanggal_berangkat'),
+        ]);
+
+        return redirect()->to('/pemberangkatan')->with('success', 'Data pemberangkatan berhasil diperbarui');
+    }
+
+    public function delete($id)
+    {
+        $session = session();
+        $userRole = $session->get('user_role');
+
+        // Hanya admin dan karyawan yang bisa hapus
+        if ($userRole !== 'admin' && $userRole !== 'karyawan') {
+            return redirect()->to('/pemberangkatan')->with('error', 'Anda tidak memiliki akses untuk hapus data');
+        }
+
+        $this->pemberangkatanModel->delete($id);
+        return redirect()->to('/pemberangkatan')->with('success', 'Data pemberangkatan berhasil dihapus');
     }
 
     public function save()
@@ -55,13 +182,6 @@ class Pemberangkatan extends BaseController
             session()->setFlashdata('success', 'Data berhasil ditambahkan');
         }
 
-        return redirect()->to('/pemberangkatan');
-    }
-
-    public function delete($id)
-    {
-        $this->pemberangkatanModel->delete($id);
-        session()->setFlashdata('success', 'Data berhasil dihapus!');
         return redirect()->to('/pemberangkatan');
     }
 

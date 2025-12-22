@@ -19,6 +19,10 @@ $routes->post('/jabatan/save', 'Jabatan::save');
 $routes->get('/jabatan/delete/(:num)', 'Jabatan::delete/$1');
 $routes->get('/jabatan/get/(:num)', 'Jabatan::getjabatan/$1');
 
+// LAPORAN JABATAN
+$routes->get('/laporanjabatan', 'Laporanjabatan::index');
+$routes->get('/laporanjabatan/cetak', 'Laporanjabatan::cetak');
+
 // PAKET BUS
 $routes->get('/paketbus', 'Paketbus::index');
 $routes->post('/paketbus/save', 'Paketbus::save');
@@ -37,6 +41,10 @@ $routes->post('/pemberangkatan/save', 'Pemberangkatan::save');
 $routes->get('/pemberangkatan/delete/(:num)', 'Pemberangkatan::delete/$1');
 $routes->get('/pemberangkatan/get/(:num)', 'Pemberangkatan::getpemberangkatan/$1');
 
+// LAPORAN PEMBERANGKATAN
+$routes->get('/laporanpemberangkatan', 'Laporanpemberangkatan::index');
+$routes->get('/laporanpemberangkatan/cetak', 'Laporanpemberangkatan::cetak');
+
 // PEMESANAN
 $routes->get('/pemesanan', 'Pemesanan::index');
 $routes->post('/pemesanan/save', 'Pemesanan::save');
@@ -44,11 +52,19 @@ $routes->get('/pemesanan/delete/(:num)', 'Pemesanan::delete/$1');
 $routes->get('/pemesanan/get/(:num)', 'Pemesanan::getpemesanan/$1');
 $routes->get('/pemesanan/laporan', 'Pemesanan::laporan');
 
+// LAPORAN PEMESANAN
+$routes->get('/laporanpemesanan', 'Laporanpemesanan::index');
+$routes->get('/laporanpemesanan/cetak', 'Laporanpemesanan::cetak');
+
 // PEMBAYARAN
 $routes->get('/pembayaran', 'Pembayaran::index');
 $routes->post('/pembayaran/save', 'Pembayaran::save');
 $routes->get('/pembayaran/delete/(:num)', 'Pembayaran::delete/$1');
 $routes->get('/pembayaran/get/(:num)', 'Pembayaran::getpembayaran/$1');
+
+// LAPORAN PEMBAYARAN
+$routes->get('/laporanpembayaran', 'Laporanpembayaran::index');
+$routes->get('/laporanpembayaran/cetak', 'Laporanpembayaran::cetak');
 
 // PEMESANAN DETAIL
 $routes->get('/pemesanan-detail', 'PemesananDetail::index');
@@ -56,11 +72,19 @@ $routes->post('/pemesanan-detail/save', 'PemesananDetail::save');
 $routes->get('/pemesanan-detail/delete/(:num)', 'PemesananDetail::delete/$1');
 $routes->get('/pemesanan-detail/get/(:num)', 'PemesananDetail::getpemesananDetail/$1');
 
+// LAPORAN PEMESANAN DETAIL
+$routes->get('/laporanpemesanandetail', 'Laporanpemesanandetail::index');
+$routes->get('/laporanpemesanandetail/cetak', 'Laporanpemesanandetail::cetak');
+
 // KARYAWAN
 $routes->get('/karyawan', 'Karyawan::index');
 $routes->post('/karyawan/save', 'Karyawan::save');
 $routes->get('/karyawan/delete/(:num)', 'Karyawan::delete/$1');
 $routes->get('/karyawan/get/(:num)', 'Karyawan::getkaryawan/$1');
+
+// LAPORAN KARYAWAN
+$routes->get('/laporankaryawan', 'Laporankaryawan::index');
+$routes->get('/laporankaryawan/cetak', 'Laporankaryawan::cetak');
 
 // JENIS BUS
 $routes->get('/jenisbus', 'Jenisbus::index');
@@ -68,11 +92,35 @@ $routes->post('/jenisbus/save', 'Jenisbus::save');
 $routes->get('/jenisbus/delete/(:num)', 'Jenisbus::delete/$1');
 $routes->get('/jenisbus/get/(:num)', 'Jenisbus::getjenisbus/$1');
 
+// LAPORAN JENIS BUS
+$routes->get('/laporanjenisbus', 'Laporanjenisbus::index');
+$routes->get('/laporanjenisbus/cetak', 'Laporanjenisbus::cetak');
+
 // BUS
 $routes->get('/bus', 'Bus::index');
 $routes->post('/bus/save', 'Bus::save');
 $routes->get('/bus/delete/(:num)', 'Bus::delete/$1');
 $routes->get('/bus/get/(:num)', 'Bus::getbus/$1');
+
+// LAPORAN BUS
+$routes->get('/laporanbus', 'Laporanbus::index');
+$routes->get('/laporanbus/cetak', 'Laporanbus::cetak');
+
+// LAPORAN PAKET WISATA
+$routes->get('/laporanpaketwisata', 'Laporanpaketwisata::index');
+$routes->get('/laporanpaketwisata/cetak', 'Laporanpaketwisata::cetak');
+
+// LAPORAN PAKET BUS
+$routes->get('/laporanpaketbus', 'Laporanpaketbus::index');
+$routes->get('/laporanpaketbus/cetak', 'Laporanpaketbus::cetak');
+
+// LAPORAN PEMILIK
+$routes->get('/laporanpemilik', 'Laporanpemilik::index');
+$routes->get('/laporanpemilik/cetak', 'Laporanpemilik::cetak');
+
+// LAPORAN PENYEWA
+$routes->get('/laporanpenyewa', 'Laporanpenyewa::index');
+$routes->get('/laporanpenyewa/cetak', 'Laporanpenyewa::cetak');
 
 // PAKET WISATA
 $routes->get('/paketwisata', 'Paketwisata::index');

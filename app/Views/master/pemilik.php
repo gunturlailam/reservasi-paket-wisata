@@ -8,9 +8,14 @@
             <p class="text-muted mb-0">Kelola data pemilik perusahaan.</p>
         </div>
 
-        <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalForm" onclick="tambah()">
-            <i class="mdi mdi-plus"></i> Tambah Data
-        </button>
+        <div class="d-flex gap-2">
+            <a href="<?= site_url('/laporanpemilik/cetak') ?>" class="btn btn-info" target="_blank">
+                <i class="mdi mdi-printer"></i> Cetak Laporan
+            </a>
+            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalForm" onclick="tambah()">
+                <i class="mdi mdi-plus"></i> Tambah Data
+            </button>
+        </div>
     </div>
 
     <?php if (session()->getFlashdata('success')) : ?>

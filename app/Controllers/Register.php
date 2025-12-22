@@ -11,6 +11,7 @@ class Register extends Controller
 {
     public function register()
     {
+        helper(['form']);
         $jabatanModel = new JabatanModel();
         $data['jabatan'] = $jabatanModel->findAll();
         return view('register_view', $data);
