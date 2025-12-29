@@ -15,25 +15,54 @@ class Laporanpembayaran extends BaseController
 
     public function index()
     {
-        $data['pembayaran'] = $this->pembayaranModel->select('pembayaran.*, pemesanan.id as no_pemesanan, penyewa.nama_penyewa')
-            ->join('pemesanan', 'pemesanan.id = pembayaran.id_pemesanan')
-            ->join('penyewa', 'penyewa.id = pemesanan.id_penyewa')
-            ->findAll();
+        $tanggal_awal = $this->request->getGet('tanggal_awal');
+        $tanggal_akhir = $this->request->getGet('tanggal_akhir');
 
-        $data['total'] = count($data['pembayaran']);
+        // Cek apakah filter sudah disubmit
+        $isFiltered = $tanggal_awal && $tanggal_akhir;
 
-        return view('laporan/pembayaran/laporan', $data);
+        $pembayaran = [];
+        $total = 0;
+
+        if ($isFiltered) {
+            $pembayaran = $this->pembayaranModel->getLaporanPembayaran($tanggal_awal, $tanggal_akhir);
+            foreach ($pembayaran as $row) {
+                $total += $row['jumlah_bayar'];
+            }
+        }
+
+        $data = [
+            'title' => 'Laporan Pembayaran',
+            'pembayaran' => $pembayaran,
+            'tanggal_awal' => $tanggal_awal ?? date('Y-m-01'),
+            'tanggal_akhir' => $tanggal_akhir ?? date('Y-m-d'),
+            'total' => $total,
+            'isFiltered' => $isFiltered,
+        ];
+
+        return view('laporan/laporan_pembayaran', $data);
     }
 
     public function cetak()
     {
-        $data['pembayaran'] = $this->pembayaranModel->select('pembayaran.*, pemesanan.id as no_pemesanan, penyewa.nama_penyewa')
-            ->join('pemesanan', 'pemesanan.id = pembayaran.id_pemesanan')
-            ->join('penyewa', 'penyewa.id = pemesanan.id_penyewa')
-            ->findAll();
+        $tanggal_awal = $this->request->getGet('tanggal_awal') ?? date('Y-m-01');
+        $tanggal_akhir = $this->request->getGet('tanggal_akhir') ?? date('Y-m-d');
 
-        $data['total'] = count($data['pembayaran']);
+        $pembayaran = $this->pembayaranModel->getLaporanPembayaran($tanggal_awal, $tanggal_akhir);
 
-        return view('laporan/pembayaran/cetak', $data);
+        $total = 0;
+        foreach ($pembayaran as $row) {
+            $total += $row['jumlah_bayar'];
+        }
+
+        $data = [
+            'title' => 'Laporan Pembayaran',
+            'pembayaran' => $pembayaran,
+            'tanggal_awal' => $tanggal_awal,
+            'tanggal_akhir' => $tanggal_akhir,
+            'total' => $total,
+        ];
+
+        return view('laporan/laporan_pembayaran_cetak', $data);
     }
 }

@@ -21,11 +21,39 @@ class PemesananModel extends Model
 
     public function getAll()
     {
-        return $this->select('pemesanan.*, penyewa.nama_penyewa, paket_bus.id as kode_paketbus, paket_wisata.nama_paket')
+        return $this->baseSelect()->findAll();
+    }
+
+    public function getPaged(int $perPage = 10)
+    {
+        return $this->baseSelect()
+            ->orderBy('pemesanan.id', 'DESC')
+            ->paginate($perPage);
+    }
+
+    public function getPagedByPenyewa(int $penyewaId, int $perPage = 10)
+    {
+        return $this->baseSelect()
+            ->where('pemesanan.id_penyewa', $penyewaId)
+            ->orderBy('pemesanan.id', 'DESC')
+            ->paginate($perPage);
+    }
+
+    public function listByPenyewa(int $penyewaId)
+    {
+        return $this->baseSelect()
+            ->where('pemesanan.id_penyewa', $penyewaId)
+            ->orderBy('pemesanan.id', 'DESC')
+            ->findAll();
+    }
+
+    private function baseSelect()
+    {
+        return $this->select('pemesanan.*, penyewa.nama_penyewa, paket_bus.id as kode_paketbus, paket_wisata.nama_paket, paket_wisata.harga, pembayaran.id as pembayaran_id, pembayaran.jumlah_bayar, pembayaran.tanggal_bayar')
             ->join('penyewa', 'penyewa.id = pemesanan.id_penyewa', 'left')
             ->join('paket_bus', 'paket_bus.id = pemesanan.id_paketbus', 'left')
             ->join('paket_wisata', 'paket_wisata.id = paket_bus.id_paketwisata', 'left')
-            ->findAll();
+            ->join('pembayaran', 'pembayaran.id_pemesanan = pemesanan.id', 'left');
     }
 
     protected bool $allowEmptyInserts = false;

@@ -6,51 +6,116 @@ use CodeIgniter\Model;
 
 class PembayaranModel extends Model
 {
-    protected $table            = 'pembayaran';
-    protected $primaryKey       = 'id';
+    protected $table = 'pembayaran';
+    protected $primaryKey = 'id';
     protected $useAutoIncrement = true;
-    protected $returnType       = 'array';
-    protected $useSoftDeletes   = false;
-    protected $protectFields    = true;
-    protected $allowedFields    = [
+    protected $returnType = 'array';
+    protected $useSoftDeletes = false;
+    protected $allowedFields = [
         'id_pemesanan',
         'tanggal_bayar',
         'jumlah_bayar',
         'metode_bayar',
+        'bukti_bayar',
     ];
+    protected $useTimestamps = false;
+    protected $db;
 
-    public function getAll()
+    public function __construct()
     {
-        return $this->select('pembayaran.*, pemesanan.tanggal_pesan, penyewa.nama_penyewa')
-            ->join('pemesanan', 'pemesanan.id = pembayaran.id_pemesanan', 'left')
-            ->join('penyewa', 'penyewa.id = pemesanan.id_penyewa', 'left')
-            ->findAll();
+        parent::__construct();
+        $this->db = \Config\Database::connect();
     }
 
-    protected bool $allowEmptyInserts = false;
-    protected bool $updateOnlyChanged = true;
+    public function getPembayaranList()
+    {
+        return $this->db->table('pembayaran')
+            ->select('
+                pembayaran.id,
+                pembayaran.id_pemesanan,
+                pembayaran.tanggal_bayar,
+                pembayaran.jumlah_bayar,
+                pembayaran.metode_bayar,
+                pembayaran.bukti_bayar,
+                pemesanan.tanggal_pesan,
+                pemesanan.total_bayar,
+                pemesanan_detail.tanggal_berangkat,
+                pemesanan_detail.tanggal_kembali,
+                paket_wisata.nama_paket,
+                paket_wisata.tujuan
+            ')
+            ->join('pemesanan', 'pemesanan.id = pembayaran.id_pemesanan', 'inner')
+            ->join('pemesanan_detail', 'pemesanan_detail.id_pemesanan = pembayaran.id_pemesanan', 'left')
+            ->join('paket_bus', 'paket_bus.id = pemesanan.id_paketbus', 'left')
+            ->join('paket_wisata', 'paket_wisata.id = paket_bus.id_paketwisata', 'left')
+            ->orderBy('pembayaran.id', 'DESC')
+            ->get()
+            ->getResultArray();
+    }
 
-    protected array $casts = [];
-    protected array $castHandlers = [];
+    public function getPembayaranDetail($id)
+    {
+        return $this->db->table('pembayaran')
+            ->select('
+                pembayaran.*,
+                pemesanan.tanggal_pesan,
+                pemesanan.total_bayar,
+                pemesanan_detail.tanggal_berangkat,
+                pemesanan_detail.tanggal_kembali,
+                paket_wisata.nama_paket,
+                paket_wisata.tujuan
+            ')
+            ->join('pemesanan', 'pemesanan.id = pembayaran.id_pemesanan', 'left')
+            ->join('pemesanan_detail', 'pemesanan_detail.id_pemesanan = pembayaran.id_pemesanan', 'left')
+            ->join('paket_bus', 'paket_bus.id = pemesanan.id_paketbus', 'left')
+            ->join('paket_wisata', 'paket_wisata.id = paket_bus.id_paketwisata', 'left')
+            ->where('pembayaran.id', $id)
+            ->get()
+            ->getRowArray();
+    }
 
-    protected $useTimestamps = false;
-    protected $dateFormat    = 'datetime';
-    protected $createdField  = 'created_at';
-    protected $updatedField  = 'updated_at';
-    protected $deletedField  = 'deleted_at';
+    public function getLaporanPembayaran($tanggal_awal, $tanggal_akhir)
+    {
+        return $this->db->table('pembayaran')
+            ->select('
+                pembayaran.id,
+                pembayaran.tanggal_bayar,
+                pembayaran.jumlah_bayar,
+                pembayaran.metode_bayar,
+                penyewa.nama_penyewa,
+                paket_wisata.nama_paket
+            ')
+            ->join('pemesanan', 'pemesanan.id = pembayaran.id_pemesanan', 'left')
+            ->join('penyewa', 'penyewa.id = pemesanan.id_penyewa', 'left')
+            ->join('paket_bus', 'paket_bus.id = pemesanan.id_paketbus', 'left')
+            ->join('paket_wisata', 'paket_wisata.id = paket_bus.id_paketwisata', 'left')
+            ->where('pembayaran.tanggal_bayar >=', $tanggal_awal)
+            ->where('pembayaran.tanggal_bayar <=', $tanggal_akhir)
+            ->where('pembayaran.tanggal_bayar IS NOT NULL', null, false)
+            ->orderBy('pembayaran.tanggal_bayar', 'ASC')
+            ->get()
+            ->getResultArray();
+    }
 
-    protected $validationRules      = [];
-    protected $validationMessages   = [];
-    protected $skipValidation       = false;
-    protected $cleanValidationRules = true;
-
-    protected $allowCallbacks = true;
-    protected $beforeInsert   = [];
-    protected $afterInsert    = [];
-    protected $beforeUpdate   = [];
-    protected $afterUpdate    = [];
-    protected $beforeFind     = [];
-    protected $afterFind      = [];
-    protected $beforeDelete   = [];
-    protected $afterDelete    = [];
+    public function getPemesananBelumBayar()
+    {
+        return $this->db->table('pemesanan')
+            ->select('
+                pemesanan.id,
+                pemesanan.tanggal_pesan,
+                pemesanan.total_bayar,
+                penyewa.nama_penyewa,
+                paket_wisata.nama_paket,
+                paket_wisata.tujuan,
+                pemesanan_detail.tanggal_berangkat,
+                pemesanan_detail.tanggal_kembali
+            ')
+            ->join('penyewa', 'penyewa.id = pemesanan.id_penyewa', 'left')
+            ->join('paket_bus', 'paket_bus.id = pemesanan.id_paketbus', 'left')
+            ->join('paket_wisata', 'paket_wisata.id = paket_bus.id_paketwisata', 'left')
+            ->join('pemesanan_detail', 'pemesanan_detail.id_pemesanan = pemesanan.id', 'left')
+            ->where('pemesanan.id NOT IN (SELECT id_pemesanan FROM pembayaran)', null, false)
+            ->get()
+            ->getResultArray();
+    }
 }

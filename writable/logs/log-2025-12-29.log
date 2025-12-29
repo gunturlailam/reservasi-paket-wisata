@@ -1,0 +1,1018 @@
+DEBUG - 2025-12-29 08:59:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:00:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-29 09:00:17 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'reservasi' in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'reservasi', 3306, '', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `n...', Array, false)
+#4 C:\laragon\www\reservasi-wisata\app\Models\UserModel.php(147): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\reservasi-wisata\app\Controllers\Login.php(35): App\Models\UserModel->findPemilikByEmail('lailamyuro1@gma...')
+#6 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\Login->authenticate()
+#7 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'reservasi' in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `n...', Array, false)
+#3 C:\laragon\www\reservasi-wisata\app\Models\UserModel.php(147): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\reservasi-wisata\app\Controllers\Login.php(35): App\Models\UserModel->findPemilikByEmail('lailamyuro1@gma...')
+#5 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\Login->authenticate()
+#6 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2025-12-29 09:00:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'reservasi'
+[Method: POST, Route: login/authenticate]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `nama_pemilik` AS `name`, `email`, `nohp` AS `phone`, `password`, `foto`
+FROM `pemilik`
+WHERE `email` = :email:', [...], false)
+ 3 APPPATH\Models\UserModel.php(147): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Login.php(35): App\Models\UserModel->findPemilikByEmail('lailamyuro1@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->authenticate()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-12-29 09:01:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:01:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:01:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:04:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-29 09:04:47 --> ErrorException: Undefined array key "tanggal_berangkat"
+[Method: GET, Route: pembayaran]
+in APPPATH\Views\transaksi\pembayaran.php on line 58.
+ 1 APPPATH\Views\transaksi\pembayaran.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tanggal_berangkat"', 'C:\\laragon\\www\\reservasi-wisata\\app\\Views\\transaksi\\pembayaran.php', 58)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\reservasi-wisata\\app\\Views\\transaksi\\pembayaran.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('transaksi/pembayaran', [], true)
+ 5 APPPATH\Controllers\Pembayaran.php(36): view('transaksi/pembayaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-12-29 09:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-29 09:05:56 --> mysqli_sql_exception: Unknown column 'pembayaran.metode_pembayaran' in 'field list' in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pembaya...', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pembaya...')
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pembaya...')
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pembaya...', Array, false)
+#4 C:\laragon\www\reservasi-wisata\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\reservasi-wisata\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\reservasi-wisata\app\Models\PembayaranModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\reservasi-wisata\app\Controllers\Pembayaran.php(23): App\Models\PembayaranModel->getPembayaranList()
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+#9 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+#10 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-12-29 09:05:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pembayaran.metode_pembayaran' in 'field list'
+[Method: GET, Route: pembayaran]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\PembayaranModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Pembayaran.php(23): App\Models\PembayaranModel->getPembayaranList()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-12-29 09:05:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pembayaran.metode_pembayaran' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\PembayaranModel.php(42): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Pembayaran.php(23): App\Models\PembayaranModel->getPembayaranList()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-12-29 09:05:56 --> [Caused by] mysqli_sql_exception: Unknown column 'pembayaran.metode_pembayaran' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\PembayaranModel.php(42): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Pembayaran.php(23): App\Models\PembayaranModel->getPembayaranList()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-12-29 09:06:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-29 09:06:19 --> mysqli_sql_exception: Unknown column 'pembayaran.metode_pembayaran' in 'field list' in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pembaya...', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pembaya...')
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pembaya...')
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pembaya...', Array, false)
+#4 C:\laragon\www\reservasi-wisata\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\reservasi-wisata\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\reservasi-wisata\app\Models\PembayaranModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\reservasi-wisata\app\Controllers\Pembayaran.php(23): App\Models\PembayaranModel->getPembayaranList()
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+#9 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+#10 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-12-29 09:06:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pembayaran.metode_pembayaran' in 'field list'
+[Method: GET, Route: pembayaran]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\PembayaranModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Pembayaran.php(23): App\Models\PembayaranModel->getPembayaranList()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-12-29 09:06:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pembayaran.metode_pembayaran' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\PembayaranModel.php(42): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Pembayaran.php(23): App\Models\PembayaranModel->getPembayaranList()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-12-29 09:06:19 --> [Caused by] mysqli_sql_exception: Unknown column 'pembayaran.metode_pembayaran' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\PembayaranModel.php(42): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Pembayaran.php(23): App\Models\PembayaranModel->getPembayaranList()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-12-29 09:06:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-29 09:06:47 --> mysqli_sql_exception: Unknown column 'pembayaran.metode_pembayaran' in 'field list' in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pembaya...', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pembaya...')
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pembaya...')
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pembaya...', Array, false)
+#4 C:\laragon\www\reservasi-wisata\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\reservasi-wisata\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\reservasi-wisata\app\Models\PembayaranModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\reservasi-wisata\app\Controllers\Pembayaran.php(23): App\Models\PembayaranModel->getPembayaranList()
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+#9 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+#10 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-12-29 09:06:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pembayaran.metode_pembayaran' in 'field list'
+[Method: GET, Route: pembayaran]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\PembayaranModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Pembayaran.php(23): App\Models\PembayaranModel->getPembayaranList()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-12-29 09:06:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pembayaran.metode_pembayaran' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\PembayaranModel.php(42): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Pembayaran.php(23): App\Models\PembayaranModel->getPembayaranList()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-12-29 09:06:47 --> [Caused by] mysqli_sql_exception: Unknown column 'pembayaran.metode_pembayaran' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pembayaran`.`id`, `pembayaran`.`metode_pembayaran`, `pembayaran`.`total_bayar`, `pembayaran`.`status_pembayaran`, `pembayaran`.`tanggal_pesan`, `pembayaran`.`tanggal_pembayaran`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id` = `pembayaran`.`id_pemesanan_detail`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `pemesanan_detail`.`id_paket`
+ORDER BY `pembayaran`.`tanggal_pesan` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\PembayaranModel.php(42): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Pembayaran.php(23): App\Models\PembayaranModel->getPembayaranList()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-12-29 09:10:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-29 09:10:52 --> mysqli_sql_exception: Unknown column 'paket_wisata.lokasi' in 'field list' in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pembaya...', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pembaya...')
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pembaya...')
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pembaya...', Array, false)
+#4 C:\laragon\www\reservasi-wisata\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\reservasi-wisata\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\reservasi-wisata\app\Models\PembayaranModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\reservasi-wisata\app\Controllers\Pembayaran.php(26): App\Models\PembayaranModel->getPembayaranList()
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+#9 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+#10 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-12-29 09:10:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'paket_wisata.lokasi' in 'field list'
+[Method: GET, Route: pembayaran]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pembayaran`.`id`, `pembayaran`.`id_pemesanan`, `pembayaran`.`tanggal_bayar`, `pembayaran`.`jumlah_bayar`, `pembayaran`.`metode_bayar`, `pemesanan`.`tanggal_pesan`, `pemesanan`.`total_bayar`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan` ON `pemesanan`.`id` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id_pemesanan` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `paket_bus` ON `paket_bus`.`id` = `pemesanan`.`id_paketbus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket_bus`.`id_paketwisata`
+ORDER BY `pembayaran`.`tanggal_bayar` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\PembayaranModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Pembayaran.php(26): App\Models\PembayaranModel->getPembayaranList()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-12-29 09:10:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'paket_wisata.lokasi' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pembayaran`.`id`, `pembayaran`.`id_pemesanan`, `pembayaran`.`tanggal_bayar`, `pembayaran`.`jumlah_bayar`, `pembayaran`.`metode_bayar`, `pemesanan`.`tanggal_pesan`, `pemesanan`.`total_bayar`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan` ON `pemesanan`.`id` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id_pemesanan` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `paket_bus` ON `paket_bus`.`id` = `pemesanan`.`id_paketbus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket_bus`.`id_paketwisata`
+ORDER BY `pembayaran`.`tanggal_bayar` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pembayaran`.`id`, `pembayaran`.`id_pemesanan`, `pembayaran`.`tanggal_bayar`, `pembayaran`.`jumlah_bayar`, `pembayaran`.`metode_bayar`, `pemesanan`.`tanggal_pesan`, `pemesanan`.`total_bayar`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan` ON `pemesanan`.`id` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id_pemesanan` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `paket_bus` ON `paket_bus`.`id` = `pemesanan`.`id_paketbus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket_bus`.`id_paketwisata`
+ORDER BY `pembayaran`.`tanggal_bayar` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pembayaran`.`id`, `pembayaran`.`id_pemesanan`, `pembayaran`.`tanggal_bayar`, `pembayaran`.`jumlah_bayar`, `pembayaran`.`metode_bayar`, `pemesanan`.`tanggal_pesan`, `pemesanan`.`total_bayar`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan` ON `pemesanan`.`id` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id_pemesanan` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `paket_bus` ON `paket_bus`.`id` = `pemesanan`.`id_paketbus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket_bus`.`id_paketwisata`
+ORDER BY `pembayaran`.`tanggal_bayar` DESC', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\PembayaranModel.php(42): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Pembayaran.php(26): App\Models\PembayaranModel->getPembayaranList()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-12-29 09:10:52 --> [Caused by] mysqli_sql_exception: Unknown column 'paket_wisata.lokasi' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pembayaran`.`id`, `pembayaran`.`id_pemesanan`, `pembayaran`.`tanggal_bayar`, `pembayaran`.`jumlah_bayar`, `pembayaran`.`metode_bayar`, `pemesanan`.`tanggal_pesan`, `pemesanan`.`total_bayar`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan` ON `pemesanan`.`id` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id_pemesanan` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `paket_bus` ON `paket_bus`.`id` = `pemesanan`.`id_paketbus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket_bus`.`id_paketwisata`
+ORDER BY `pembayaran`.`tanggal_bayar` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pembayaran`.`id`, `pembayaran`.`id_pemesanan`, `pembayaran`.`tanggal_bayar`, `pembayaran`.`jumlah_bayar`, `pembayaran`.`metode_bayar`, `pemesanan`.`tanggal_pesan`, `pemesanan`.`total_bayar`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan` ON `pemesanan`.`id` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id_pemesanan` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `paket_bus` ON `paket_bus`.`id` = `pemesanan`.`id_paketbus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket_bus`.`id_paketwisata`
+ORDER BY `pembayaran`.`tanggal_bayar` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pembayaran`.`id`, `pembayaran`.`id_pemesanan`, `pembayaran`.`tanggal_bayar`, `pembayaran`.`jumlah_bayar`, `pembayaran`.`metode_bayar`, `pemesanan`.`tanggal_pesan`, `pemesanan`.`total_bayar`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan` ON `pemesanan`.`id` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id_pemesanan` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `paket_bus` ON `paket_bus`.`id` = `pemesanan`.`id_paketbus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket_bus`.`id_paketwisata`
+ORDER BY `pembayaran`.`tanggal_bayar` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pembayaran`.`id`, `pembayaran`.`id_pemesanan`, `pembayaran`.`tanggal_bayar`, `pembayaran`.`jumlah_bayar`, `pembayaran`.`metode_bayar`, `pemesanan`.`tanggal_pesan`, `pemesanan`.`total_bayar`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan` ON `pemesanan`.`id` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id_pemesanan` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `paket_bus` ON `paket_bus`.`id` = `pemesanan`.`id_paketbus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket_bus`.`id_paketwisata`
+ORDER BY `pembayaran`.`tanggal_bayar` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\PembayaranModel.php(42): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Pembayaran.php(26): App\Models\PembayaranModel->getPembayaranList()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-12-29 09:10:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-29 09:10:57 --> mysqli_sql_exception: Unknown column 'paket_wisata.lokasi' in 'field list' in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pembaya...', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pembaya...')
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pembaya...')
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pembaya...', Array, false)
+#4 C:\laragon\www\reservasi-wisata\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\reservasi-wisata\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\reservasi-wisata\app\Models\PembayaranModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\reservasi-wisata\app\Controllers\Pembayaran.php(26): App\Models\PembayaranModel->getPembayaranList()
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+#9 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+#10 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-12-29 09:10:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'paket_wisata.lokasi' in 'field list'
+[Method: GET, Route: pembayaran]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pembayaran`.`id`, `pembayaran`.`id_pemesanan`, `pembayaran`.`tanggal_bayar`, `pembayaran`.`jumlah_bayar`, `pembayaran`.`metode_bayar`, `pemesanan`.`tanggal_pesan`, `pemesanan`.`total_bayar`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan` ON `pemesanan`.`id` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id_pemesanan` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `paket_bus` ON `paket_bus`.`id` = `pemesanan`.`id_paketbus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket_bus`.`id_paketwisata`
+ORDER BY `pembayaran`.`tanggal_bayar` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\PembayaranModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Pembayaran.php(26): App\Models\PembayaranModel->getPembayaranList()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-12-29 09:10:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'paket_wisata.lokasi' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pembayaran`.`id`, `pembayaran`.`id_pemesanan`, `pembayaran`.`tanggal_bayar`, `pembayaran`.`jumlah_bayar`, `pembayaran`.`metode_bayar`, `pemesanan`.`tanggal_pesan`, `pemesanan`.`total_bayar`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan` ON `pemesanan`.`id` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id_pemesanan` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `paket_bus` ON `paket_bus`.`id` = `pemesanan`.`id_paketbus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket_bus`.`id_paketwisata`
+ORDER BY `pembayaran`.`tanggal_bayar` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pembayaran`.`id`, `pembayaran`.`id_pemesanan`, `pembayaran`.`tanggal_bayar`, `pembayaran`.`jumlah_bayar`, `pembayaran`.`metode_bayar`, `pemesanan`.`tanggal_pesan`, `pemesanan`.`total_bayar`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan` ON `pemesanan`.`id` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id_pemesanan` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `paket_bus` ON `paket_bus`.`id` = `pemesanan`.`id_paketbus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket_bus`.`id_paketwisata`
+ORDER BY `pembayaran`.`tanggal_bayar` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pembayaran`.`id`, `pembayaran`.`id_pemesanan`, `pembayaran`.`tanggal_bayar`, `pembayaran`.`jumlah_bayar`, `pembayaran`.`metode_bayar`, `pemesanan`.`tanggal_pesan`, `pemesanan`.`total_bayar`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan` ON `pemesanan`.`id` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id_pemesanan` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `paket_bus` ON `paket_bus`.`id` = `pemesanan`.`id_paketbus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket_bus`.`id_paketwisata`
+ORDER BY `pembayaran`.`tanggal_bayar` DESC', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\PembayaranModel.php(42): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Pembayaran.php(26): App\Models\PembayaranModel->getPembayaranList()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+CRITICAL - 2025-12-29 09:10:57 --> [Caused by] mysqli_sql_exception: Unknown column 'paket_wisata.lokasi' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pembayaran`.`id`, `pembayaran`.`id_pemesanan`, `pembayaran`.`tanggal_bayar`, `pembayaran`.`jumlah_bayar`, `pembayaran`.`metode_bayar`, `pemesanan`.`tanggal_pesan`, `pemesanan`.`total_bayar`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan` ON `pemesanan`.`id` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id_pemesanan` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `paket_bus` ON `paket_bus`.`id` = `pemesanan`.`id_paketbus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket_bus`.`id_paketwisata`
+ORDER BY `pembayaran`.`tanggal_bayar` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pembayaran`.`id`, `pembayaran`.`id_pemesanan`, `pembayaran`.`tanggal_bayar`, `pembayaran`.`jumlah_bayar`, `pembayaran`.`metode_bayar`, `pemesanan`.`tanggal_pesan`, `pemesanan`.`total_bayar`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan` ON `pemesanan`.`id` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id_pemesanan` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `paket_bus` ON `paket_bus`.`id` = `pemesanan`.`id_paketbus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket_bus`.`id_paketwisata`
+ORDER BY `pembayaran`.`tanggal_bayar` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pembayaran`.`id`, `pembayaran`.`id_pemesanan`, `pembayaran`.`tanggal_bayar`, `pembayaran`.`jumlah_bayar`, `pembayaran`.`metode_bayar`, `pemesanan`.`tanggal_pesan`, `pemesanan`.`total_bayar`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan` ON `pemesanan`.`id` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id_pemesanan` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `paket_bus` ON `paket_bus`.`id` = `pemesanan`.`id_paketbus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket_bus`.`id_paketwisata`
+ORDER BY `pembayaran`.`tanggal_bayar` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pembayaran`.`id`, `pembayaran`.`id_pemesanan`, `pembayaran`.`tanggal_bayar`, `pembayaran`.`jumlah_bayar`, `pembayaran`.`metode_bayar`, `pemesanan`.`tanggal_pesan`, `pemesanan`.`total_bayar`, `pemesanan_detail`.`tanggal_berangkat`, `pemesanan_detail`.`tanggal_kembali`, `paket_wisata`.`nama_paket`, `paket_wisata`.`lokasi`
+FROM `pembayaran`
+LEFT JOIN `pemesanan` ON `pemesanan`.`id` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `pemesanan_detail` ON `pemesanan_detail`.`id_pemesanan` = `pembayaran`.`id_pemesanan`
+LEFT JOIN `paket_bus` ON `paket_bus`.`id` = `pemesanan`.`id_paketbus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket_bus`.`id_paketwisata`
+ORDER BY `pembayaran`.`tanggal_bayar` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\PembayaranModel.php(42): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Pembayaran.php(26): App\Models\PembayaranModel->getPembayaranList()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-12-29 09:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-29 09:12:05 --> Error: Call to undefined function formatMetode()
+[Method: GET, Route: pembayaran]
+in APPPATH\Views\transaksi\pembayaran.php on line 66.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('transaksi/pembayaran', [], true)
+ 4 APPPATH\Controllers\Pembayaran.php(30): view('transaksi/pembayaran', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-12-29 09:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-29 09:12:09 --> Error: Call to undefined function formatMetode()
+[Method: GET, Route: pembayaran]
+in APPPATH\Views\transaksi\pembayaran.php on line 66.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('transaksi/pembayaran', [], true)
+ 4 APPPATH\Controllers\Pembayaran.php(30): view('transaksi/pembayaran', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-12-29 09:13:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-29 09:13:02 --> Error: Call to undefined function formatMetode()
+[Method: GET, Route: pembayaran]
+in APPPATH\Views\transaksi\pembayaran.php on line 66.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('transaksi/pembayaran', [], true)
+ 4 APPPATH\Controllers\Pembayaran.php(30): view('transaksi/pembayaran', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pembayaran->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-12-29 09:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:14:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:14:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:15:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:15:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:15:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:16:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:16:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:18:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:18:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:18:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:21:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:21:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:23:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:24:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:26:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:27:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 09:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:05:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:05:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:05:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:05:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:06:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:08:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:08:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:08:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:08:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:15:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:18:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:20:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:23:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:28:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:32:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:32:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:32:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:32:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:33:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:33:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:33:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:33:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:33:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:37:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:38:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:38:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:38:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:39:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:39:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:39:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:39:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:39:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:40:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:40:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:40:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:40:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:41:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:43:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:43:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:44:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:44:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:44:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:44:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:44:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:49:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:50:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:52:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:54:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:54:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:54:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:56:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:57:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:57:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:57:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:57:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:58:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:58:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:58:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 10:59:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:04:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:04:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:04:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:05:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:05:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:06:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:06:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:06:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:08:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:10:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:10:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:11:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:13:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:13:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:13:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:13:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:13:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:13:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:13:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:13:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:14:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:14:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:16:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:16:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:26:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:26:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:26:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:28:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 11:28:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-29 16:58:45 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'reservasi', 3306, '', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\reservasi-wisata\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\reservasi-wisata\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\reservasi-wisata\app\Controllers\Home.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\reservasi-wisata\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\reservasi-wisata\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\reservasi-wisata\app\Controllers\Home.php(22): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\laragon\www\reservasi-wisata\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\reservasi-wisata\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\reservasi-wisata\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\reservasi-wisata\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\reservasi-wisata\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2025-12-29 16:58:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `paket_wisata`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(22): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\reservasi-wisata\\public\\index.php')
+DEBUG - 2025-12-29 16:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 16:59:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 16:59:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 16:59:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:02:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:02:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:03:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:03:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:04:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:04:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:04:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:06:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:07:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:07:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:07:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:08:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:08:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:08:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:09:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:10:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:11:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-29 17:14:20 --> mysqli_sql_exception: Unknown column 'no_identitas' in 'field list' in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', NULL, false)
+#4 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\laragon\www\reservasi-wisata\app\Database\Seeds\TestDataSeeder.php(28): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\laragon\www\reservasi-wisata\system\Database\Seeder.php(149): App\Database\Seeds\TestDataSeeder->run()
+#7 C:\laragon\www\reservasi-wisata\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 C:\laragon\www\reservasi-wisata\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 C:\laragon\www\reservasi-wisata\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 C:\laragon\www\reservasi-wisata\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 C:\laragon\www\reservasi-wisata\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\laragon\www\reservasi-wisata\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-12-29 17:14:47 --> mysqli_sql_exception: Unknown column 'no_telepon' in 'field list' in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', NULL, false)
+#4 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\laragon\www\reservasi-wisata\app\Database\Seeds\TestDataSeeder.php(26): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\laragon\www\reservasi-wisata\system\Database\Seeder.php(149): App\Database\Seeds\TestDataSeeder->run()
+#7 C:\laragon\www\reservasi-wisata\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 C:\laragon\www\reservasi-wisata\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 C:\laragon\www\reservasi-wisata\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 C:\laragon\www\reservasi-wisata\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 C:\laragon\www\reservasi-wisata\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\laragon\www\reservasi-wisata\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-12-29 17:15:32 --> mysqli_sql_exception: Unknown column 'deskripsi' in 'field list' in C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\reservasi-wisata\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\laragon\www\reservasi-wisata\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', NULL, false)
+#4 C:\laragon\www\reservasi-wisata\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\laragon\www\reservasi-wisata\app\Database\Seeds\TestDataSeeder.php(43): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\laragon\www\reservasi-wisata\system\Database\Seeder.php(149): App\Database\Seeds\TestDataSeeder->run()
+#7 C:\laragon\www\reservasi-wisata\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 C:\laragon\www\reservasi-wisata\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 C:\laragon\www\reservasi-wisata\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 C:\laragon\www\reservasi-wisata\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 C:\laragon\www\reservasi-wisata\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\laragon\www\reservasi-wisata\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+DEBUG - 2025-12-29 17:16:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:16:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:16:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:17:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:17:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:17:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:18:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:18:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:18:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:18:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:18:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-12-29 17:20:06 --> Pemesanan data: [{"id":"9","tanggal_pesan":"2025-12-01","total_bayar":"3520000.00","nama_penyewa":"Siti Nurhaliza","nama_paket":"Paket Sekolah","tujuan":"Sijunjung","tanggal_berangkat":null,"tanggal_kembali":null}]
+DEBUG - 2025-12-29 17:20:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:22:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-12-29 17:22:17 --> Pemesanan data: [{"id":"9","tanggal_pesan":"2025-12-01","total_bayar":"3520000.00","nama_penyewa":"Siti Nurhaliza","nama_paket":"Paket Sekolah","tujuan":"Sijunjung","tanggal_berangkat":null,"tanggal_kembali":null},{"id":"10","tanggal_pesan":"2025-12-24","total_bayar":"5000000.00","nama_penyewa":"Guntur Lailam Yuro","nama_paket":"Paket Sekolah","tujuan":"Sijunjung","tanggal_berangkat":"2026-01-03","tanggal_kembali":"2026-01-05"}]
+DEBUG - 2025-12-29 17:23:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:26:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:26:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:26:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:27:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:28:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:28:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:30:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:30:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:31:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:31:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:33:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:34:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:34:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:36:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:36:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:37:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:37:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:37:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:37:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:37:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:39:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:39:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:44:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:44:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:44:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:44:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:45:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:45:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:46:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:46:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:46:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:47:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:47:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:47:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:48:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:48:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:49:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:50:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:50:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:50:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:50:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:52:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:52:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:52:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:56:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:56:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:57:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 17:58:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-29 18:01:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

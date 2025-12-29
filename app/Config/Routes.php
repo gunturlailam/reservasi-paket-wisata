@@ -5,7 +5,8 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Login::index');
+$routes->get('/', 'Home::index');
+$routes->get('/home', 'Home::index');
 
 // LOGIN & DASHBOARD
 $routes->get('/login', 'Login::index');
@@ -58,9 +59,14 @@ $routes->get('/laporanpemesanan/cetak', 'Laporanpemesanan::cetak');
 
 // PEMBAYARAN
 $routes->get('/pembayaran', 'Pembayaran::index');
+$routes->get('/pembayaran/debug', 'Pembayaran::debug');
 $routes->post('/pembayaran/save', 'Pembayaran::save');
+$routes->post('/pembayaran/tambah', 'Pembayaran::tambah');
+$routes->post('/pembayaran/konfirmasi', 'Pembayaran::konfirmasi');
 $routes->get('/pembayaran/delete/(:num)', 'Pembayaran::delete/$1');
 $routes->get('/pembayaran/get/(:num)', 'Pembayaran::getpembayaran/$1');
+$routes->get('/pembayaran/detail/(:num)', 'Pembayaran::detail/$1');
+$routes->get('/pembayaran/proses/(:num)', 'Pembayaran::proses/$1');
 
 // LAPORAN PEMBAYARAN
 $routes->get('/laporanpembayaran', 'Laporanpembayaran::index');

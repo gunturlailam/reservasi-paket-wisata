@@ -21,10 +21,48 @@ class PemesananDetailModel extends Model
 
     public function getAll()
     {
-        return $this->select('pemesanan_detail.*, pemesanan.tanggal_pesan, penyewa.nama_penyewa')
+        return $this->withPaymentSelect()
+            ->findAll();
+    }
+
+    public function getPaged(int $perPage = 10)
+    {
+        return $this->withPaymentSelect()
+            ->orderBy('pemesanan_detail.id', 'DESC')
+            ->paginate($perPage);
+    }
+
+    public function getPagedByPenyewa(int $penyewaId, int $perPage = 10)
+    {
+        return $this->withPaymentSelect()
+            ->where('pemesanan.id_penyewa', $penyewaId)
+            ->orderBy('pemesanan_detail.id', 'DESC')
+            ->paginate($perPage);
+    }
+
+    private function withPaymentSelect()
+    {
+        return $this->select('pemesanan_detail.*, pemesanan.tanggal_pesan, penyewa.nama_penyewa, paket_wisata.nama_paket, paket_wisata.harga, pembayaran.id as pembayaran_id, pembayaran.jumlah_bayar, pembayaran.tanggal_bayar')
             ->join('pemesanan', 'pemesanan.id = pemesanan_detail.id_pemesanan', 'left')
             ->join('penyewa', 'penyewa.id = pemesanan.id_penyewa', 'left')
-            ->findAll();
+            ->join('paket_bus', 'paket_bus.id = pemesanan.id_paketbus', 'left')
+            ->join('paket_wisata', 'paket_wisata.id = paket_bus.id_paketwisata', 'left')
+            ->join('pembayaran', 'pembayaran.id_pemesanan = pemesanan_detail.id_pemesanan', 'left');
+    }
+
+    public function checkBusAvailability($idBus, $tanggalBerangkat, $tanggalKembali, $excludeId = null)
+    {
+        $query = $this->db->table('pemberangkatan')
+            ->select('pemberangkatan.id')
+            ->join('pemesanan_detail', 'pemesanan_detail.id_pemesanan = pemberangkatan.id_pemesanan', 'left')
+            ->where('pemberangkatan.id_bus', $idBus)
+            ->where('((pemesanan_detail.tanggal_berangkat <= "' . $tanggalKembali . '" AND pemesanan_detail.tanggal_kembali >= "' . $tanggalBerangkat . '"))');
+
+        if ($excludeId) {
+            $query = $query->where('pemesanan_detail.id !=', $excludeId);
+        }
+
+        return $query->get()->getNumRows() === 0;
     }
 
     protected bool $allowEmptyInserts = false;
