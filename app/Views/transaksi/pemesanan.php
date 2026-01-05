@@ -210,7 +210,10 @@
 </div>
 
 <script>
+    var currentEditId = null;
+
     function tambah() {
+        currentEditId = null;
         document.getElementById('modalTitle').innerText = 'Tambah Pemesanan';
         document.getElementById('id').value = '';
         document.getElementById('tanggal_pesan').value = '';
@@ -223,11 +226,13 @@
         document.getElementById('durasiHari').innerText = '0';
         document.getElementById('estimasiBayar').innerText = 'Rp 0';
         document.getElementById('dateError').style.display = 'none';
+        hideTanggalError();
         setSubmitEnabled(true);
         syncTotalBayar();
     }
 
     function edit(id) {
+        currentEditId = id;
         fetch('<?= site_url('/pemesanan/get/') ?>' + id)
             .then((response) => response.json())
             .then((data) => {
@@ -238,6 +243,7 @@
                 document.getElementById('id_penyewa').value = data.id_penyewa;
                 document.getElementById('id_paketbus').value = data.id_paketbus;
                 document.getElementById('total_bayar').value = data.total_bayar;
+                hideTanggalError();
                 syncTotalBayar();
 
                 const modal = new bootstrap.Modal(document.getElementById('modalForm'));
@@ -246,21 +252,80 @@
     }
 
     function handleDateChange() {
-        const tanggalBerangkat = new Date(document.getElementById('tanggal_berangkat').value);
-        const tanggalKembali = new Date(document.getElementById('tanggal_kembali').value);
+        const tanggalBerangkat = document.getElementById('tanggal_berangkat').value;
+        const tanggalKembali = document.getElementById('tanggal_kembali').value;
         const errorElement = document.getElementById('dateError');
-        const invalid = !(tanggalKembali > tanggalBerangkat);
+
+        const tglBerangkatDate = new Date(tanggalBerangkat);
+        const tglKembaliDate = new Date(tanggalKembali);
+        const invalid = tanggalKembali && !(tglKembaliDate > tglBerangkatDate);
 
         if (invalid) {
             errorElement.style.display = 'block';
             setSubmitEnabled(false);
         } else {
             errorElement.style.display = 'none';
-            setSubmitEnabled(true);
         }
 
-        updateDurasi(tanggalBerangkat, tanggalKembali, invalid);
+        // Cek ketersediaan tanggal via AJAX
+        if (tanggalBerangkat) {
+            cekKetersediaanTanggal(tanggalBerangkat, tanggalKembali);
+        }
+
+        updateDurasi(tglBerangkatDate, tglKembaliDate, invalid);
         syncTotalBayar();
+    }
+
+    function cekKetersediaanTanggal(tanggalBerangkat, tanggalKembali) {
+        var url = '<?= site_url('/pemesanan/cek-tanggal') ?>?tanggal_berangkat=' + tanggalBerangkat;
+        if (tanggalKembali) {
+            url += '&tanggal_kembali=' + tanggalKembali;
+        }
+        if (currentEditId) {
+            url += '&exclude_id=' + currentEditId;
+        }
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                if (data.tanggal_exists) {
+                    showTanggalError('Tanggal berangkat sudah digunakan oleh pemesanan lain!');
+                    setSubmitEnabled(false);
+                } else if (data.range_conflict) {
+                    showTanggalError('Jadwal perjalanan bentrok dengan pemesanan lain!');
+                    setSubmitEnabled(false);
+                } else {
+                    hideTanggalError();
+                    // Re-check date range validation
+                    const tglBerangkatDate = new Date(tanggalBerangkat);
+                    const tglKembaliDate = new Date(tanggalKembali);
+                    if (!tanggalKembali || tglKembaliDate > tglBerangkatDate) {
+                        setSubmitEnabled(true);
+                    }
+                }
+            })
+            .catch(err => {
+                console.error('Error checking date:', err);
+            });
+    }
+
+    function showTanggalError(message) {
+        var errorDiv = document.getElementById('tanggalConflictError');
+        if (!errorDiv) {
+            errorDiv = document.createElement('small');
+            errorDiv.id = 'tanggalConflictError';
+            errorDiv.className = 'text-danger d-block mt-1';
+            document.getElementById('tanggal_berangkat').parentNode.appendChild(errorDiv);
+        }
+        errorDiv.textContent = message;
+        errorDiv.style.display = 'block';
+    }
+
+    function hideTanggalError() {
+        var errorDiv = document.getElementById('tanggalConflictError');
+        if (errorDiv) {
+            errorDiv.style.display = 'none';
+        }
     }
 
     function updateDurasi(tglBerangkat, tglKembali, invalid) {
@@ -296,6 +361,21 @@
     function formatRupiah(value) {
         return 'Rp ' + (value || 0).toLocaleString('id-ID');
     }
+
+    // Form validation sebelum submit
+    document.querySelector('#modalForm form').addEventListener('submit', function(e) {
+        var tanggalBerangkat = document.getElementById('tanggal_berangkat').value;
+        var tanggalKembali = document.getElementById('tanggal_kembali').value;
+        var errorDiv = document.getElementById('tanggalConflictError');
+
+        if (errorDiv && errorDiv.style.display !== 'none') {
+            e.preventDefault();
+            alert('Tidak dapat menyimpan: ' + errorDiv.textContent);
+            return false;
+        }
+
+        return true;
+    });
 
     document.addEventListener('DOMContentLoaded', syncTotalBayar);
 </script>

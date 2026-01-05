@@ -41,6 +41,18 @@ $routes->get('/pemberangkatan', 'Pemberangkatan::index');
 $routes->post('/pemberangkatan/save', 'Pemberangkatan::save');
 $routes->get('/pemberangkatan/delete/(:num)', 'Pemberangkatan::delete/$1');
 $routes->get('/pemberangkatan/get/(:num)', 'Pemberangkatan::getpemberangkatan/$1');
+$routes->get('/pemberangkatan/cek-ketersediaan', 'Pemberangkatan::cekKetersediaan');
+$routes->get('/pemberangkatan/cetak/(:num)', 'Pemberangkatan::cetak/$1');
+
+// LAPORAN PERJALANAN BARU
+$routes->get('/pemberangkatan/laporanTujuan', 'Pemberangkatan::laporanTujuan');
+$routes->get('/pemberangkatan/cetakLaporanTujuan', 'Pemberangkatan::cetakLaporanTujuan');
+$routes->get('/pemberangkatan/laporanPeriode', 'Pemberangkatan::laporanPeriode');
+$routes->get('/pemberangkatan/cetakLaporanPeriode', 'Pemberangkatan::cetakLaporanPeriode');
+
+// LAPORAN PERJALANAN TERINTEGRASI DENGAN MAIN TEMPLATE
+$routes->get('/laporan/tujuan', 'Pemberangkatan::laporanTujuanMain');
+$routes->get('/laporan/periode', 'Pemberangkatan::laporanPeriodeMain');
 
 // LAPORAN PEMBERANGKATAN
 $routes->get('/laporanpemberangkatan', 'Laporanpemberangkatan::index');
@@ -52,6 +64,7 @@ $routes->post('/pemesanan/save', 'Pemesanan::save');
 $routes->get('/pemesanan/delete/(:num)', 'Pemesanan::delete/$1');
 $routes->get('/pemesanan/get/(:num)', 'Pemesanan::getpemesanan/$1');
 $routes->get('/pemesanan/laporan', 'Pemesanan::laporan');
+$routes->get('/pemesanan/cek-tanggal', 'Pemesanan::cekTanggal');
 
 // LAPORAN PEMESANAN
 $routes->get('/laporanpemesanan', 'Laporanpemesanan::index');

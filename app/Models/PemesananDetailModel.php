@@ -65,6 +65,35 @@ class PemesananDetailModel extends Model
         return $query->get()->getNumRows() === 0;
     }
 
+    /**
+     * Cek apakah tanggal berangkat sudah digunakan
+     */
+    public function isTanggalBerangkatExists($tanggalBerangkat, $excludePemesananId = null)
+    {
+        $builder = $this->where('tanggal_berangkat', $tanggalBerangkat);
+
+        if ($excludePemesananId) {
+            $builder->where('id_pemesanan !=', $excludePemesananId);
+        }
+
+        return $builder->countAllResults() > 0;
+    }
+
+    /**
+     * Cek apakah range tanggal bentrok dengan pemesanan lain
+     */
+    public function isTanggalRangeConflict($tanggalBerangkat, $tanggalKembali, $excludePemesananId = null)
+    {
+        $builder = $this->db->table('pemesanan_detail');
+        $builder->where("(tanggal_berangkat <= '{$tanggalKembali}' AND tanggal_kembali >= '{$tanggalBerangkat}')");
+
+        if ($excludePemesananId) {
+            $builder->where('id_pemesanan !=', $excludePemesananId);
+        }
+
+        return $builder->countAllResults() > 0;
+    }
+
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
 

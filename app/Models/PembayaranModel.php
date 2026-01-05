@@ -29,26 +29,30 @@ class PembayaranModel extends Model
 
     public function getPembayaranList()
     {
-        return $this->db->table('pembayaran')
+        // Menampilkan SEMUA pemesanan dengan status pembayaran (lunas/belum bayar)
+        return $this->db->table('pemesanan')
             ->select('
-                pembayaran.id,
-                pembayaran.id_pemesanan,
+                pemesanan.id,
+                pemesanan.id as id_pemesanan,
+                pemesanan.tanggal_pesan,
+                pemesanan.total_bayar,
+                pembayaran.id as pembayaran_id,
                 pembayaran.tanggal_bayar,
                 pembayaran.jumlah_bayar,
                 pembayaran.metode_bayar,
                 pembayaran.bukti_bayar,
-                pemesanan.tanggal_pesan,
-                pemesanan.total_bayar,
                 pemesanan_detail.tanggal_berangkat,
                 pemesanan_detail.tanggal_kembali,
+                penyewa.nama_penyewa,
                 paket_wisata.nama_paket,
                 paket_wisata.tujuan
             ')
-            ->join('pemesanan', 'pemesanan.id = pembayaran.id_pemesanan', 'inner')
-            ->join('pemesanan_detail', 'pemesanan_detail.id_pemesanan = pembayaran.id_pemesanan', 'left')
+            ->join('penyewa', 'penyewa.id = pemesanan.id_penyewa', 'left')
             ->join('paket_bus', 'paket_bus.id = pemesanan.id_paketbus', 'left')
             ->join('paket_wisata', 'paket_wisata.id = paket_bus.id_paketwisata', 'left')
-            ->orderBy('pembayaran.id', 'DESC')
+            ->join('pemesanan_detail', 'pemesanan_detail.id_pemesanan = pemesanan.id', 'left')
+            ->join('pembayaran', 'pembayaran.id_pemesanan = pemesanan.id', 'left')
+            ->orderBy('pemesanan.id', 'DESC')
             ->get()
             ->getResultArray();
     }

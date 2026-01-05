@@ -65,6 +65,17 @@ class Pemesanan extends BaseController
             return redirect()->back()->withInput()->with('error', 'Tanggal kembali harus setelah tanggal berangkat');
         }
 
+        // Validasi tanggal berangkat tidak boleh sama dengan pemesanan lain
+        $excludePemesananId = $id ? $id : null;
+        if ($this->pemesananDetailModel->isTanggalBerangkatExists($tanggalBerangkat, $excludePemesananId)) {
+            return redirect()->back()->withInput()->with('error', 'Tanggal berangkat sudah digunakan oleh pemesanan lain. Silakan pilih tanggal lain.');
+        }
+
+        // Validasi range tanggal tidak bentrok dengan pemesanan lain
+        if ($this->pemesananDetailModel->isTanggalRangeConflict($tanggalBerangkat, $tanggalKembali, $excludePemesananId)) {
+            return redirect()->back()->withInput()->with('error', 'Jadwal perjalanan bentrok dengan pemesanan lain. Silakan pilih tanggal yang berbeda.');
+        }
+
         $totalBayar = $this->calculateTotalBayar(
             $this->request->getPost('id_paketbus'),
             $jumlahPenumpang,
@@ -192,5 +203,32 @@ class Pemesanan extends BaseController
         ];
 
         return view('laporan/laporan_pemesanan', $data);
+    }
+
+    /**
+     * AJAX endpoint untuk cek ketersediaan tanggal
+     */
+    public function cekTanggal()
+    {
+        $tanggalBerangkat = $this->request->getGet('tanggal_berangkat');
+        $tanggalKembali = $this->request->getGet('tanggal_kembali');
+        $excludeId = $this->request->getGet('exclude_id');
+
+        if (!$tanggalBerangkat) {
+            return $this->response->setJSON(['error' => 'Tanggal berangkat diperlukan']);
+        }
+
+        $isTanggalExists = $this->pemesananDetailModel->isTanggalBerangkatExists($tanggalBerangkat, $excludeId);
+
+        $isRangeConflict = false;
+        if ($tanggalKembali) {
+            $isRangeConflict = $this->pemesananDetailModel->isTanggalRangeConflict($tanggalBerangkat, $tanggalKembali, $excludeId);
+        }
+
+        return $this->response->setJSON([
+            'tanggal_exists' => $isTanggalExists,
+            'range_conflict' => $isRangeConflict,
+            'available' => !$isTanggalExists && !$isRangeConflict,
+        ]);
     }
 }

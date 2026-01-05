@@ -87,6 +87,7 @@ $userRole = $session->get('user_role');
                 <li><a href="<?= site_url('/laporanpembayaran') ?>">Laporan Pembayaran</a></li>
                 <li><a href="<?= site_url('/laporanpemesanandetail') ?>">Laporan Detail Pemesanan</a></li>
                 <li><a href="<?= site_url('/laporanpemberangkatan') ?>">Laporan Keberangkatan</a></li>
+                <li><a href="<?= site_url('/laporan/periode') ?>"></i> Laporan Periode - Tujuan </a></li>
                 <li><a href="<?= site_url('/laporankaryawan') ?>">Laporan Karyawan</a></li>
                 <li><a href="<?= site_url('/laporanjabatan') ?>">Laporan Jabatan</a></li>
                 <li><a href="<?= site_url('/laporanjenisbus') ?>">Laporan Jenis Bus</a></li>

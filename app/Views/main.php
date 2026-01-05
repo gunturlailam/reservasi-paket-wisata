@@ -18,6 +18,7 @@
     <link href=<?= base_url('assets/css/icons.css') ?> rel="stylesheet" type="text/css">
     <link href=<?= base_url('assets/css/style.css') ?> rel="stylesheet" type="text/css">
     <link href=<?= base_url('assets/css/pembayaran.css') ?> rel="stylesheet" type="text/css">
+    <link href=<?= base_url('assets/css/menu-custom.css') ?> rel="stylesheet" type="text/css">
 
 </head>
 
@@ -101,6 +102,7 @@
     <!-- App js -->
     <script src=<?= base_url('assets/js/app.js') ?>></script>
     <script src=<?= base_url('assets/js/pembayaran.js') ?>></script>
+    <script src=<?= base_url('assets/js/menu-active.js') ?>></script>
     <script>
         /* BEGIN SVG WEATHER ICON */
         if (typeof Skycons !== 'undefined') {

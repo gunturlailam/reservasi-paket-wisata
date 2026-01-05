@@ -1,0 +1,69 @@
+/* Custom Menu Styling */
+
+/* Menu Divider */
+.menu-divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 8px 15px;
+  border: none;
+}
+
+/* Menu Item dengan Icon */
+.sidebar-inner #sidebar-menu ul li a i {
+  margin-right: 8px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Highlight untuk menu laporan perjalanan */
+.sidebar-inner #sidebar-menu ul li a[href*="laporanTujuan"],
+.sidebar-inner #sidebar-menu ul li a[href*="laporanPeriode"] {
+  background-color: rgba(52, 152, 219, 0.1);
+  border-left: 3px solid #3498db;
+  padding-left: 12px;
+}
+
+.sidebar-inner #sidebar-menu ul li a[href*="laporanTujuan"]:hover,
+.sidebar-inner #sidebar-menu ul li a[href*="laporanPeriode"]:hover {
+  background-color: rgba(52, 152, 219, 0.2);
+  color: #3498db;
+}
+
+/* Active state untuk menu laporan */
+.sidebar-inner #sidebar-menu ul li a.active[href*="laporanTujuan"],
+.sidebar-inner #sidebar-menu ul li a.active[href*="laporanPeriode"] {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Spacing untuk submenu */
+.sidebar-inner #sidebar-menu ul.list-unstyled li {
+  margin-bottom: 2px;
+}
+
+.sidebar-inner #sidebar-menu ul.list-unstyled li a {
+  padding: 8px 15px;
+  font-size: 13px;
+  border-radius: 4px;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+/* Icon styling dalam submenu */
+.sidebar-inner #sidebar-menu ul.list-unstyled li a i.mdi {
+  font-size: 16px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* Responsive untuk mobile */
+@media (max-width: 768px) {
+  .sidebar-inner #sidebar-menu ul.list-unstyled li a {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .menu-divider {
+    margin: 10px 10px;
+  }
+}

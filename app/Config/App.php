@@ -16,7 +16,7 @@ class App extends BaseConfig
      *
      * E.g., http://example.com/
      */
-    public string $baseURL = 'http://localhost:8080/';
+    public string $baseURL = 'http://192.168.43.157:8080/';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
@@ -29,7 +29,14 @@ class App extends BaseConfig
      *
      * @var list<string>
      */
-    public array $allowedHostnames = [];
+    public array $allowedHostnames = [
+        'localhost',
+        '127.0.0.1',
+        '192.168.43.157',
+        '192.168.1.*',
+        '192.168.0.*',
+        '10.0.0.*'
+    ];
 
     /**
      * --------------------------------------------------------------------------

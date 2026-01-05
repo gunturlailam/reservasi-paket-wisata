@@ -53,23 +53,44 @@
                                     <td>
                                         <?= !empty($row['tanggal_berangkat']) ? date('Y-m-d', strtotime($row['tanggal_berangkat'])) : '-' ?> s/d <?= !empty($row['tanggal_kembali']) ? date('Y-m-d', strtotime($row['tanggal_kembali'])) : '-' ?>
                                     </td>
-                                    <td class="fw-bold text-primary">Rp <?= number_format((float)($row['jumlah_bayar'] ?? 0), 0, ',', '.') ?></td>
                                     <td>
-                                        <?php if (!empty($row['tanggal_bayar'])) : ?>
-                                            <span class="badge" style="background-color: #28a745; color: white; padding: 5px 10px; border-radius: 4px;">Sudah Dibayar</span>
-                                        <?php else : ?>
-                                            <span class="badge" style="background-color: #ffc107; color: #000; padding: 5px 10px; border-radius: 4px;">Menunggu Pembayaran</span>
+                                        <div>Total: <span class="fw-bold">Rp <?= number_format((float)($row['total_bayar'] ?? 0), 0, ',', '.') ?></span></div>
+                                        <?php if (!empty($row['pembayaran_id'])) : ?>
+                                            <small class="text-success">Dibayar: Rp <?= number_format((float)($row['jumlah_bayar'] ?? 0), 0, ',', '.') ?></small>
                                         <?php endif; ?>
                                     </td>
                                     <td>
-                                        <?php if (empty($row['tanggal_bayar'])) : ?>
-                                            <button type="button" class="btn btn-success btn-sm btn-bayar"
-                                                data-id="<?= $row['id'] ?>"
-                                                data-metode="<?= esc($row['metode_bayar'] ?? 'Tunai') ?>"
-                                                style="margin-right: 5px;">Bayar</button>
-                                            <button type="button" class="btn btn-danger btn-sm" onclick="hapus(<?= $row['id'] ?>)">Batal</button>
+                                        <?php if (empty($row['pembayaran_id'])) : ?>
+                                            <!-- Belum ada pembayaran sama sekali -->
+                                            <span class="badge" style="background-color: #dc3545; color: white; padding: 5px 10px; border-radius: 4px;">Belum Bayar</span>
+                                        <?php elseif (!empty($row['tanggal_bayar'])) : ?>
+                                            <!-- Sudah lunas -->
+                                            <span class="badge" style="background-color: #28a745; color: white; padding: 5px 10px; border-radius: 4px;">Lunas</span>
                                         <?php else : ?>
-                                            <span class="badge" style="background-color: #6c757d; color: white; padding: 5px 15px; border-radius: 4px;">Lunas</span>
+                                            <!-- Sudah ada pembayaran tapi belum dikonfirmasi -->
+                                            <span class="badge" style="background-color: #ffc107; color: #000; padding: 5px 10px; border-radius: 4px;">Menunggu Konfirmasi</span>
+                                        <?php endif; ?>
+                                    </td>
+                                    <td>
+                                        <?php if (empty($row['pembayaran_id'])) : ?>
+                                            <!-- Belum ada pembayaran - tampilkan tombol Bayar -->
+                                            <button type="button" class="btn btn-primary btn-sm btn-tambah-bayar"
+                                                data-id="<?= $row['id'] ?>"
+                                                data-penyewa="<?= esc($row['nama_penyewa'] ?? '-') ?>"
+                                                data-paket="<?= esc($row['nama_paket'] ?? '-') ?>"
+                                                data-total="<?= $row['total_bayar'] ?? 0 ?>">
+                                                <i class="mdi mdi-cash"></i> Bayar
+                                            </button>
+                                        <?php elseif (empty($row['tanggal_bayar'])) : ?>
+                                            <!-- Ada pembayaran tapi belum dikonfirmasi -->
+                                            <button type="button" class="btn btn-success btn-sm btn-bayar"
+                                                data-id="<?= $row['pembayaran_id'] ?>"
+                                                data-metode="<?= esc($row['metode_bayar'] ?? 'Tunai') ?>"
+                                                style="margin-right: 5px;">Konfirmasi</button>
+                                            <button type="button" class="btn btn-danger btn-sm" onclick="hapus(<?= $row['pembayaran_id'] ?>)">Batal</button>
+                                        <?php else : ?>
+                                            <!-- Sudah lunas -->
+                                            <span class="badge" style="background-color: #6c757d; color: white; padding: 5px 15px; border-radius: 4px;">Selesai</span>
                                             <?php if (!empty($row['bukti_bayar'])) : ?>
                                                 <button type="button" class="btn btn-info btn-sm ml-1" onclick="lihatBukti('<?= esc($row['bukti_bayar']) ?>')"><i class="mdi mdi-eye"></i></button>
                                             <?php endif; ?>
@@ -79,7 +100,7 @@
                             <?php endforeach; ?>
                         <?php else : ?>
                             <tr>
-                                <td colspan="7" class="text-center py-4">Belum ada data pembayaran</td>
+                                <td colspan="7" class="text-center py-4">Belum ada data pemesanan</td>
                             </tr>
                         <?php endif; ?>
                     </tbody>
@@ -327,7 +348,7 @@
             });
     });
 
-    // Event delegation untuk tombol Bayar
+    // Event delegation untuk tombol Bayar (yang sudah ada pembayaran)
     document.addEventListener('click', function(e) {
         if (e.target.classList.contains('btn-bayar')) {
             e.preventDefault();
@@ -347,6 +368,40 @@
                 document.getElementById('previewBukti').style.display = 'none';
                 $('#modalKonfirmasi').modal('show');
             }
+        }
+
+        // Tombol Bayar untuk pemesanan yang belum ada pembayaran
+        if (e.target.classList.contains('btn-tambah-bayar') || e.target.closest('.btn-tambah-bayar')) {
+            var btn = e.target.classList.contains('btn-tambah-bayar') ? e.target : e.target.closest('.btn-tambah-bayar');
+            var id = btn.getAttribute('data-id');
+            var penyewa = btn.getAttribute('data-penyewa');
+            var paket = btn.getAttribute('data-paket');
+            var total = btn.getAttribute('data-total');
+
+            // Set nilai di modal
+            document.getElementById('id_pemesanan').value = id;
+            document.getElementById('detailPenyewa').innerText = penyewa;
+            document.getElementById('detailPaket').innerText = paket;
+            document.getElementById('detailTotalHarus').innerText = 'Rp ' + formatRupiah(parseInt(total));
+            document.getElementById('jumlah_bayar').value = total;
+
+            // Cari data lengkap dari pemesananData
+            var data = null;
+            for (var i = 0; i < pemesananData.length; i++) {
+                if (pemesananData[i].id == id) {
+                    data = pemesananData[i];
+                    break;
+                }
+            }
+
+            if (data) {
+                document.getElementById('detailTujuan').innerText = data.tujuan || '-';
+                document.getElementById('detailTanggalPesan').innerText = formatTanggal(data.tanggal_pesan);
+                document.getElementById('detailTanggalBerangkat').innerText = formatTanggal(data.tanggal_berangkat);
+                document.getElementById('detailTanggalKembali').innerText = formatTanggal(data.tanggal_kembali);
+            }
+
+            $('#modalTambahPembayaran').modal('show');
         }
     });
 
